@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/hello-world/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -249,7 +249,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/20/hello-world/" itemprop="url">Hexo使用</a></h1>
+                <a class="post-title-link" href="/2018/12/21/hello-world/" itemprop="url">Hexo使用</a></h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-20T14:31:04+08:00">
-                2018-12-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T11:41:40+08:00">
+                2018-12-21
               </time>
             
 
@@ -310,6 +310,148 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/css-之-animation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大大虾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/css-之-animation/" itemprop="url">css 之 animation, transform</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-20T18:08:00+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>先强烈推荐一个前端程序员可以自己练习基础的网站：<a href="https://learn.freecodecamp.org" target="_blank" rel="noopener">https://learn.freecodecamp.org</a>，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。</p>
+<p>今天要分享的就是animation, 和transform</p>
+<h2 id="transfrom"><a href="#transfrom" class="headerlink" title="transfrom"></a>transfrom</h2><p>属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。<br>你可以通过transform-origin修改中心点位置，比如：<br>transform-origin: bottom left;-中心点为左下角位置角<br>transform-origin: 50px 70px; -中心点位置有中间移到了距离左侧50像素，顶部70像素的地方</p>
+<ul>
+<li>scale(x,y) 放大／缩小倍数</li>
+<li>rotate(deg) 旋转角度</li>
+<li>skewX(xdeg) 横向拉升 </li>
+<li>skewY(ydeg) 纵向拉升</li>
+<li>skew(xdeg, ydeg) 横纵向都拉伸</li>
+<li>translate(x, y) 原点向右或向下挪动</li>
+<li>matrix(a, b, c, d, e, f) 理解成3*3矩阵，原点位置x, y, 则实际x变化位置为ax+cy+e,y变化位置为bx+dy+f,等同于transform: translate(ax+cy+e+’px’, bx+dy+f+’px’) <a href="https://segmentfault.com/a/1190000011942578" target="_blank" rel="noopener">详情请点击</a></li>
+<li>matrix3d() 3D变换 4*4矩阵</li>
+</ul>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>annimation配合keyframes一起用<br>@keyframes slidein {<br>  from { transform: scaleX(0); }<br>  to   { transform: scaleX(1); }<br>}</p>
+<ul>
+<li>animation-name  动画name</li>
+<li>animation-duration 一个动画周期的时长，单位为秒(s)或者毫秒(ms)</li>
+<li>animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear</li>
+<li>animation-delay 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。</li>
+<li>animation-iteration-count 循环次数</li>
+<li>animation-direction 属性指示动画是否反向播放 normal／reverse／alternate／alternate-reverse</li>
+<li>animation-fill-mode 用来指定在动画执行之前和之后如何给动画的目标应用样式。 none／forwards／backwards／both／应用多个none, backwards／应用多个both, forwards, none</li>
+</ul>
 
           
         
@@ -903,7 +1045,7 @@
 <h3 id="nvm与n的区别"><a href="#nvm与n的区别" class="headerlink" title="nvm与n的区别"></a>nvm与n的区别</h3><p>node版本管理工具还有一个是TJ大神的n命令，n命令是作为一个node模块而存在，二nvm是一个独立与node／npm的外部shell脚本，因此n命令比nvm更佳局限。</p>
 <p>由于npm安装的模块路径均为/usr/local/lib/node_modules,当使用n切换不同的node版本是，实际上会共用全局的node／npm目录，因此不能很好的满足『按不同 node 版本使用不同全局 node 模块』的需求。</p>
 <h2 id="升级"><a href="#升级" class="headerlink" title="升级"></a>升级</h2><h3 id="使用npm升级node-js"><a href="#使用npm升级node-js" class="headerlink" title="使用npm升级node.js"></a>使用npm升级node.js</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo npm cache clean -f</span><br><span class="line">sudo npm install -g n</span><br><span class="line">sudo n stable</span><br></pre></td></tr></table></figure>
-<h3 id="你可以查看你的版本好"><a href="#你可以查看你的版本好" class="headerlink" title="你可以查看你的版本好"></a>你可以查看你的版本好</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<h3 id="你可以查看你的版本号"><a href="#你可以查看你的版本号" class="headerlink" title="你可以查看你的版本号"></a>你可以查看你的版本号</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
 <h2 id="降级"><a href="#降级" class="headerlink" title="降级"></a>降级</h2><h3 id="先查看本机有几个npm版本"><a href="#先查看本机有几个npm版本" class="headerlink" title="先查看本机有几个npm版本"></a>先查看本机有几个npm版本</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
 <p>结果如下:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">        v7.10.1</span><br><span class="line">-&gt;      v11.2.0</span><br><span class="line">        v11.5.0</span><br><span class="line">         system</span><br><span class="line">default -&gt; node (-&gt; v11.5.0)</span><br><span class="line">node -&gt; stable (-&gt; v11.5.0) (default)</span><br><span class="line">stable -&gt; 11.5 (-&gt; v11.5.0) (default)</span><br><span class="line">iojs -&gt; N/A (default)</span><br><span class="line">lts/* -&gt; lts/dubnium (-&gt; N/A)</span><br><span class="line">lts/argon -&gt; v4.9.1 (-&gt; N/A)</span><br><span class="line">lts/boron -&gt; v6.15.1 (-&gt; N/A)</span><br><span class="line">lts/carbon -&gt; v8.14.1 (-&gt; N/A)</span><br><span class="line">lts/dubnium -&gt; v10.14.2 (-&gt; N/A)</span><br></pre></td></tr></table></figure></p>
 <h3 id="切换到7-10-1"><a href="#切换到7-10-1" class="headerlink" title="切换到7.10.1"></a>切换到7.10.1</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use v7.10.1</span><br></pre></td></tr></table></figure>
@@ -1189,7 +1331,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1202,7 +1344,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
