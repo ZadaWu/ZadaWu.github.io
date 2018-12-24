@@ -230,7 +230,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/js-字符串转dom节点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -249,7 +249,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/21/hello-world/" itemprop="url">Hexo使用</a></h1>
+                <a class="post-title-link" href="/2018/12/24/js-字符串转dom节点/" itemprop="url">js 字符串转dom节点</a></h1>
         
 
         <div class="post-meta">
@@ -261,8 +261,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T11:41:40+08:00">
-                2018-12-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T15:12:34+08:00">
+                2018-12-24
               </time>
             
 
@@ -301,15 +301,52 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <p>最近在尝试爬取一个网页的数据时，与一般的json格式活着直接返回网页不同，他请求返回的事dom字符串，偷懒先用jquey整理出来的逻辑如下：</p>
+<h2 id="jquery"><a href="#jquery" class="headerlink" title="jquery"></a>jquery</h2><p><code>function domstrToArray(str) {
+    var domArr = $(str);
+    var result = [];
+    for(var i = 0 ; i &lt; domArr.length; i++){
+        // 用className判断是否是要拿到的节点
+        if($(domArr[i]).hasClass(&#39;posttype&#39;)){
+            var tmpObj = {
+                &#39;date&#39;: $(domArr[i]).find(&#39;.date&#39;).text().replace(/(^↵\s*)|(\s*$)/g, &quot;&quot;),
+                &#39;type&#39;: $(domArr[i]).find(&#39;.type&#39;).text().replace(/(^↵\s*)|(\s*$)/g, &quot;&quot;),
+                &#39;title&#39;: $(domArr[i]).find(&#39;h3&#39;).text().replace(/(^↵\s*)|(\s*$)/g, &quot;&quot;),
+                &#39;readCount&#39;:  $(domArr[i]).find(&#39;.cw-item-bottom&#39;).find(&#39;span:eq(0) i&#39;).text(),
+                &#39;dianzanCount&#39;: $(domArr[i]).find(&#39;.cw-item-bottom&#39;).find(&#39;span:eq(1)&#39;).text().replace(&#39;点赞&#39;, &#39;&#39;),
+                &#39;commentCount&#39;: $(domArr[i]).find(&#39;.cw-item-bottom&#39;).find(&#39;span:eq(2)&#39;).text().replace(&#39;评论&#39;, &#39;&#39;)
+            };
+            result.push(tmpObj);
+        }
+    }
+    return result;
+}</code></p>
+<h2 id="原生"><a href="#原生" class="headerlink" title="原生"></a>原生</h2><h3 id="如果将字符串转为dom节点"><a href="#如果将字符串转为dom节点" class="headerlink" title="如果将字符串转为dom节点"></a>如果将字符串转为dom节点</h3><ol>
+<li><p>document.createRange().createContextualFragment:<br><code>let frag = document.createRange().createContextualFragment(&#39;&lt;div&gt;One&lt;/div&gt;&lt;div&gt;Two&lt;/div&gt;&#39;);
+ console.log(frag);</code></p>
+<p> 后面查询节点的可以用：<br> <code>let firstDiv = frag.querySelector(&#39;div&#39;);
+  let allDivs = frag.querySelectorAll(&#39;div&#39;);</code></p>
+</li>
+<li><p>DOMParser<br> <code>let doc = new DOMParser().parseFromString(&#39;&lt;div&gt;&lt;b&gt;Hello!&lt;/b&gt;&lt;/div&gt;&#39;, &#39;text/html&#39;);</code><br> 后面查询节点可以用：<br> <code>let divs = doc.body.querySelectorAll(&#39;div&#39;);</code></p>
+</li>
+</ol>
+<p>代码如下：<br><code>function domstrToArray(str) {
+    var dom = document.createRange().createContextualFragment(str);
+    var domArr = dom.querySelectorAll(&#39;.posttype&#39;);
+    var result = [];
+    for(var i = 0 ; i &lt; domArr.length; i++){
+        var tmpObj = {
+            &#39;date&#39;: domArr[i].querySelector(&#39;.date&#39;).textContent.replace(/(^↵\s*)|(\s*$)/g, &quot;&quot;),
+            &#39;type&#39;: domArr[i].querySelector(&#39;.type&#39;).textContent.replace(/(^↵\s*)|(\s*$)/g, &quot;&quot;),
+            &#39;title&#39;: domArr[i].querySelector(&#39;h3&#39;).textContent,
+            &#39;readCount&#39;:  domArr[i].querySelectorAll(&#39;.cw-item-bottom&gt;span&#39;)[0].textContent.replace(&#39;阅读&#39;, &#39;&#39;),
+            &#39;dianzanCount&#39;: domArr[i].querySelectorAll(&#39;.cw-item-bottom&gt;span&#39;)[1].textContent.replace(&#39;点赞&#39;, &#39;&#39;),
+            &#39;commentCount&#39;: domArr[i].querySelectorAll(&#39;.cw-item-bottom&gt;span&#39;)[2].textContent.replace(&#39;评论&#39;, &#39;&#39;)
+        };
+        result.push(tmpObj);
+    }
+    return result;
+}</code></p>
 
           
         
@@ -358,7 +395,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/css-之-animation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/js-正则表达式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -377,7 +414,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/12/20/css-之-animation/" itemprop="url">css 之 animation, transform</a></h1>
+                <a class="post-title-link" href="/2018/12/24/js-正则表达式/" itemprop="url">js 正则表达式</a></h1>
         
 
         <div class="post-meta">
@@ -389,8 +426,128 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-20T18:08:00+08:00">
-                2018-12-20
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T14:30:47+08:00">
+                2018-12-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="去掉首尾空格"><a href="#去掉首尾空格" class="headerlink" title="去掉首尾空格"></a>去掉首尾空格</h2><p><code>osfipin.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/css-之-animation/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大大虾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/21/css-之-animation/" itemprop="url">css 之 animation, transform</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T18:08:00+08:00">
+                2018-12-21
               </time>
             
 
@@ -446,12 +603,264 @@
 <ul>
 <li>animation-name  动画name</li>
 <li>animation-duration 一个动画周期的时长，单位为秒(s)或者毫秒(ms)</li>
-<li>animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear</li>
+<li>animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear <a href="https://www.jianshu.com/p/d999f090d333" target="_blank" rel="noopener">贝塞尔曲线原理</a> <a href="http://cubic-bezier.com/#.25,.1,.25,1" target="_blank" rel="noopener">贝塞尔曲线对比</a></li>
 <li>animation-delay 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。</li>
 <li>animation-iteration-count 循环次数</li>
 <li>animation-direction 属性指示动画是否反向播放 normal／reverse／alternate／alternate-reverse</li>
 <li>animation-fill-mode 用来指定在动画执行之前和之后如何给动画的目标应用样式。 none／forwards／backwards／both／应用多个none, backwards／应用多个both, forwards, none</li>
 </ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/前端编码规范/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大大虾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/21/前端编码规范/" itemprop="url">前端编码规范</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T15:11:38+08:00">
+                2018-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>image请加上alt属性作为文字说明，搜索引擎会考虑其中的内容，并且对于视力障碍者能又好的了解到图片的内容。</li>
+<li>但是，有时图像与已经描述它们的标题分组，或仅用于装饰。在这些情况下，alt文本可能看似多余或不必要，这个时候请填充空字符串</li>
+<li>使用标题(h1-h6)显示内容的层次关系</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/20/hello-world/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大大虾">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/20/hello-world/" itemprop="url">Hexo使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-20T18:08:00+08:00">
+                2018-12-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
           
         
@@ -1331,7 +1740,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1344,7 +1753,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
