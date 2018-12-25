@@ -88,7 +88,7 @@
 <meta property="og:description" content="最近在尝试爬取一个网页的数据时，与一般的json格式活着直接返回网页不同，他请求返回的事dom字符串，偷懒先用jquey整理出来的逻辑如下： jqueryfunction domstrToArray(str) {     var domArr = $(str);     var result = [];     for(var i = 0 ; i &amp;lt; domArr.length; i++){">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/">
-<meta property="og:updated_time" content="2018-12-25T09:28:03.202Z">
+<meta property="og:updated_time" content="2018-12-25T09:34:02.670Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js 字符串转dom节点">
 <meta name="twitter:description" content="最近在尝试爬取一个网页的数据时，与一般的json格式活着直接返回网页不同，他请求返回的事dom字符串，偷懒先用jquey整理出来的逻辑如下： jqueryfunction domstrToArray(str) {     var domArr = $(str);     var result = [];     for(var i = 0 ; i &amp;lt; domArr.length; i++){">
@@ -372,7 +372,37 @@ result.push(tmpObj);
 <p>然后我用的是koa框架，用node跑接口的时候发现也是同样的报错：<br> ReferenceError: document is not defined</p>
 <p>上StackOverflow上发现：<br>JavaScript doesn’t have a default document global. Browsers provide one, but your Node.js code doesn’t run in a browser, it runs in the Node.js environment (e.g., as an application on your workstation, or as a server process, etc.).</p>
 <p>To run the code you’ve shown, you’d include your .js file in a page by using a script tag in the HTML, typically at the end of body just before the closing  tag:</p>
+<p>最后在同事的提示下，用了python中的BeautifulSoup库，用起来真的是6666！</p>
+<p>Demo:</p>
+<pre><code># 通过url获取评论
+`
+def getCommandByUrl( pid):
+    url = &quot;http://t.10jqka.com.cn/pid_&quot; + pid + &quot;.shtml&quot;
 
+    headers = {&apos;cache-control&apos;: &apos;no-cache&apos;}
+
+    _content = Fetcher.fetch_page_sync_get(url, headers, {},
+                                           {&apos;table&apos;: &apos;&apos;, &apos;channel&apos;: &apos;&apos;})
+    soup = BeautifulSoup(_content.text, &apos;html&apos;)
+    for li in soup.find_all(&apos;li&apos;, class_=&apos;single-comment&apos;):
+        _tmp_comment = []
+        userid = li.find_all(&apos;div&apos;, class_=&apos;commenter-name&apos;)[0].find_all(&apos;a&apos;)[0].get(&apos;href&apos;).split(&apos;/&apos;)[3]
+        username = li.find_all(&apos;div&apos;, class_=&apos;commenter-name&apos;)[0].get_text().lstrip().rstrip()
+        date = li.find_all(&apos;span&apos;, class_=&apos;comment-time&apos;)[0].get_text().lstrip().rstrip()
+        text = li.find_all(&apos;div&apos;, class_=&apos;comment-text&apos;)[0].get_text().lstrip().rstrip()
+        comment_order = li.find_all(&apos;span&apos;, class_=&apos;comment-order&apos;)[0].get_text().lstrip().rstrip()
+        reply_count = len(li.find_all(&apos;div&apos;, class_=&apos;existed-reply-container&apos;))
+        _tmp_comment.append(userid)
+        _tmp_comment.append(username)
+        _tmp_comment.append(text)
+        _tmp_comment.append(date)
+        _tmp_comment.append(comment_order)
+        _tmp_comment.append(reply_count)
+        _tmp_comment.append(pid)
+        self._db_table_datas[&apos;values&apos;].append(_tmp_comment)
+    pass
+    `
+</code></pre>
       
     </div>
     
@@ -491,7 +521,7 @@ result.push(tmpObj);
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -504,7 +534,7 @@ result.push(tmpObj);
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
