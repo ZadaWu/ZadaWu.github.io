@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
+<meta name="description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="V4.0 react使用补缺点">
 <meta property="og:url" content="http://yoursite.com/2019/01/14/react使用补缺点/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
+<meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-14T07:47:49.634Z">
+<meta property="og:updated_time" content="2019-01-14T07:49:18.674Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="V4.0 react使用补缺点">
-<meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
+<meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
 
 
 
@@ -309,13 +309,13 @@
 
       
         <h2 id="router与component属性结合使用时，如何传参数参考链接"><a href="#router与component属性结合使用时，如何传参数参考链接" class="headerlink" title="router与component属性结合使用时，如何传参数参考链接"></a>router与component属性结合使用时，如何传参数<a href="https://github.com/ReactTraining/react-router/issues/4105" target="_blank" rel="noopener">参考链接</a></h2><ol>
-<li><p>&lt;Route exact path={“/“} component={() =&gt; <start socket="{socket}" adduser="{addUser}/">}/&gt;<br> 这个解决方案是相当于自定义组件<br> 类似的：<br> <route path="/abc" render="{()="><testwidget num="2" someprop="{100}/">}/&gt;</testwidget></route></start></p>
+<li><p><code>&lt;Route exact path={&quot;/&quot;} component={() =&gt; &lt;Start socket={socket} addUser={addUser}/&gt;}/&gt;</code><br> 这个解决方案是相当于自定义组件<br> 类似的：<br> <code>&lt;Route path=&quot;/abc&quot; render={()=&gt;&lt;TestWidget num=&quot;2&quot; someProp={100}/&gt;}/&gt;</code></p>
 </li>
-<li><p><route exact="" path="/abc" render="{props" ==""> <testwidget someprop="2" {...props}="">} /&gt;</testwidget></route></p>
+<li><p><code>&lt;Route exact path=&quot;/abc&quot; render={props =&gt; &lt;TestWidget someProp=&quot;2&quot; {...props} /&gt;} /&gt;</code></p>
 </li>
 </ol>
 <p>and what I do is I actually spread {…props.match.params} because then on TestWidget you can access the URL parameters with just this.props.urlVariableHere.<br>这个解决方案是站在组件中获取路由的参数</p>
-<h2 id="如何复用组件，参考链接"><a href="#如何复用组件，参考链接" class="headerlink" title="如何复用组件，参考链接"></a>如何复用组件，<a href="https://react-cn.github.io/react/docs/reusable-components.html" target="_blank" rel="noopener">参考链接</a></h2><p>组件是 React 里复用代码最佳方式，但是有时一些复杂的组件间也需要共用一些功能。有时会被称为 跨切面关注点。React 使用 mixins 来解决这类问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var SetIntervalMixin = &#123;</span><br><span class="line">  componentWillMount: function() &#123;</span><br><span class="line">    this.intervals = [];</span><br><span class="line">  &#125;,</span><br><span class="line">  setInterval: function() &#123;</span><br><span class="line">    this.intervals.push(setInterval.apply(null, arguments));</span><br><span class="line">  &#125;,</span><br><span class="line">  componentWillUnmount: function() &#123;</span><br><span class="line">    this.intervals.forEach(clearInterval);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var TickTock = React.createClass(&#123;</span><br><span class="line">  mixins: [SetIntervalMixin], // 引用 mixin</span><br><span class="line">  getInitialState: function() &#123;</span><br><span class="line">    return &#123;seconds: 0&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  componentDidMount: function() &#123;</span><br><span class="line">    this.setInterval(this.tick, 1000); // 调用 mixin 的方法</span><br><span class="line">  &#125;,</span><br><span class="line">  tick: function() &#123;</span><br><span class="line">    this.setState(&#123;seconds: this.state.seconds + 1&#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;p&gt;</span><br><span class="line">        React has been running for &#123;this.state.seconds&#125; seconds.</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;TickTock /&gt;,</span><br><span class="line">  document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<h2 id="如何复用组件参考链接"><a href="#如何复用组件参考链接" class="headerlink" title="如何复用组件参考链接"></a>如何复用组件<a href="https://react-cn.github.io/react/docs/reusable-components.html" target="_blank" rel="noopener">参考链接</a></h2><p>组件是 React 里复用代码最佳方式，但是有时一些复杂的组件间也需要共用一些功能。有时会被称为 跨切面关注点。React 使用 mixins 来解决这类问题。<br>但是 mixins 在ES6 的情况下不支持</p>
 
       
     </div>
@@ -471,7 +471,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router与component属性结合使用时，如何传参数参考链接"><span class="nav-number">1.</span> <span class="nav-text">router与component属性结合使用时，如何传参数参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何复用组件，参考链接"><span class="nav-number">2.</span> <span class="nav-text">如何复用组件，参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router与component属性结合使用时，如何传参数参考链接"><span class="nav-number">1.</span> <span class="nav-text">router与component属性结合使用时，如何传参数参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何复用组件参考链接"><span class="nav-number">2.</span> <span class="nav-text">如何复用组件参考链接</span></a></li></ol></div>
             
 
           </div>
