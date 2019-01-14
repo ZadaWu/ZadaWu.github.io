@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="js,正则,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
-<meta name="keywords" content="js,正则">
+<meta name="description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js 正则表达式">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/js-正则表达式/index.html">
+<meta property="og:title" content="V4.0 react使用补缺点">
+<meta property="og:url" content="http://yoursite.com/2019/01/14/react使用补缺点/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
+<meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-01-14T07:47:49.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js 正则表达式">
-<meta name="twitter:description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
+<meta name="twitter:title" content="V4.0 react使用补缺点">
+<meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={“/“} component={() =&amp;gt; }/&amp;gt; 这个解决方案是相当于自定义组件 类似的： }/&amp;gt;   } /&amp;gt;   and what I do is I actually spread {…props.match.params} because then on">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/24/js-正则表达式/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/14/react使用补缺点/">
 
 
 
 
 
-  <title>js 正则表达式 | Hexo</title>
+  <title>V4.0 react使用补缺点 | Hexo</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/js-正则表达式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/14/react使用补缺点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js 正则表达式</h1>
+          <h1 class="post-title" itemprop="name headline">V4.0 react使用补缺点</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T14:30:47+08:00">
-                2018-12-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-14T14:56:36+08:00">
+                2019-01-14
               </time>
             
 
@@ -308,7 +308,14 @@
       
 
       
-        <h2 id="去掉首尾空格"><a href="#去掉首尾空格" class="headerlink" title="去掉首尾空格"></a>去掉首尾空格</h2><p><code>osfipin.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);</code></p>
+        <h2 id="router与component属性结合使用时，如何传参数参考链接"><a href="#router与component属性结合使用时，如何传参数参考链接" class="headerlink" title="router与component属性结合使用时，如何传参数参考链接"></a>router与component属性结合使用时，如何传参数<a href="https://github.com/ReactTraining/react-router/issues/4105" target="_blank" rel="noopener">参考链接</a></h2><ol>
+<li><p>&lt;Route exact path={“/“} component={() =&gt; <start socket="{socket}" adduser="{addUser}/">}/&gt;<br> 这个解决方案是相当于自定义组件<br> 类似的：<br> <route path="/abc" render="{()="><testwidget num="2" someprop="{100}/">}/&gt;</testwidget></route></start></p>
+</li>
+<li><p><route exact="" path="/abc" render="{props" ==""> <testwidget someprop="2" {...props}="">} /&gt;</testwidget></route></p>
+</li>
+</ol>
+<p>and what I do is I actually spread {…props.match.params} because then on TestWidget you can access the URL parameters with just this.props.urlVariableHere.<br>这个解决方案是站在组件中获取路由的参数</p>
+<h2 id="如何复用组件，参考链接"><a href="#如何复用组件，参考链接" class="headerlink" title="如何复用组件，参考链接"></a>如何复用组件，<a href="https://react-cn.github.io/react/docs/reusable-components.html" target="_blank" rel="noopener">参考链接</a></h2><p>组件是 React 里复用代码最佳方式，但是有时一些复杂的组件间也需要共用一些功能。有时会被称为 跨切面关注点。React 使用 mixins 来解决这类问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var SetIntervalMixin = &#123;</span><br><span class="line">  componentWillMount: function() &#123;</span><br><span class="line">    this.intervals = [];</span><br><span class="line">  &#125;,</span><br><span class="line">  setInterval: function() &#123;</span><br><span class="line">    this.intervals.push(setInterval.apply(null, arguments));</span><br><span class="line">  &#125;,</span><br><span class="line">  componentWillUnmount: function() &#123;</span><br><span class="line">    this.intervals.forEach(clearInterval);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var TickTock = React.createClass(&#123;</span><br><span class="line">  mixins: [SetIntervalMixin], // 引用 mixin</span><br><span class="line">  getInitialState: function() &#123;</span><br><span class="line">    return &#123;seconds: 0&#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  componentDidMount: function() &#123;</span><br><span class="line">    this.setInterval(this.tick, 1000); // 调用 mixin 的方法</span><br><span class="line">  &#125;,</span><br><span class="line">  tick: function() &#123;</span><br><span class="line">    this.setState(&#123;seconds: this.state.seconds + 1&#125;);</span><br><span class="line">  &#125;,</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;p&gt;</span><br><span class="line">        React has been running for &#123;this.state.seconds&#125; seconds.</span><br><span class="line">      &lt;/p&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;TickTock /&gt;,</span><br><span class="line">  document.getElementById(&apos;example&apos;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -324,14 +331,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/正则/" rel="tag"># 正则</a>
-          
-        </div>
-      
 
       
       
@@ -341,8 +340,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/css-之-animation/" rel="next" title="css 之 animation, transform">
-                <i class="fa fa-chevron-left"></i> css 之 animation, transform
+              <a href="/2018/12/25/2018年终总结/" rel="next" title="2018年终总结">
+                <i class="fa fa-chevron-left"></i> 2018年终总结
               </a>
             
           </div>
@@ -350,10 +349,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/24/js-字符串转dom节点/" rel="prev" title="js 字符串转dom节点">
-                js 字符串转dom节点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,7 +471,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉首尾空格"><span class="nav-number">1.</span> <span class="nav-text">去掉首尾空格</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router与component属性结合使用时，如何传参数参考链接"><span class="nav-number">1.</span> <span class="nav-text">router与component属性结合使用时，如何传参数参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何复用组件，参考链接"><span class="nav-number">2.</span> <span class="nav-text">如何复用组件，参考链接</span></a></li></ol></div>
             
 
           </div>
