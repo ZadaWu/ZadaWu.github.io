@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-14T07:49:18.674Z">
+<meta property="og:updated_time" content="2019-01-21T05:13:31.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="V4.0 react使用补缺点">
 <meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
@@ -316,6 +316,24 @@
 </ol>
 <p>and what I do is I actually spread {…props.match.params} because then on TestWidget you can access the URL parameters with just this.props.urlVariableHere.<br>这个解决方案是站在组件中获取路由的参数</p>
 <h2 id="如何复用组件参考链接"><a href="#如何复用组件参考链接" class="headerlink" title="如何复用组件参考链接"></a>如何复用组件<a href="https://react-cn.github.io/react/docs/reusable-components.html" target="_blank" rel="noopener">参考链接</a></h2><p>组件是 React 里复用代码最佳方式，但是有时一些复杂的组件间也需要共用一些功能。有时会被称为 跨切面关注点。React 使用 mixins 来解决这类问题。<br>但是 mixins 在ES6 的情况下不支持</p>
+<h2 id="如何操作dom-参考链接"><a href="#如何操作dom-参考链接" class="headerlink" title="如何操作dom 参考链接"></a>如何操作dom <a href="https://react.docschina.org/docs/refs-and-the-dom.html" target="_blank" rel="noopener">参考链接</a></h2><p>方法一：使用ref来访问组件<br>步骤：</p>
+<ol>
+<li>在constructor里面来创建ref：this.textInput学习学习 = React.createRef();</li>
+<li>在render中绑定dom节点： <customtextinput ref="{this.textInput}"></customtextinput></li>
+</ol>
+<p>方法二： 在函数式组间内部使用ref,使之指向一个DOM元素活着class组件：</p>
+<ol>
+<li><input type="text" ref="{(input)" ==""> { textInput = input; }} /&gt;</li>
+</ol>
+<h2 id="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"><a href="#具体属性改变时，采取重新渲染，使用shouldComponentUpdate" class="headerlink" title="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"></a>具体属性改变时，采取重新渲染，使用shouldComponentUpdate</h2><p><code>shouldComponentUpdate(nextProps, nextState) {
+    if (this.props.color !== nextProps.color) {
+      return true;
+    }
+    if (this.state.count !== nextState.count) {
+      return true;
+    }
+    return false;
+}</code></p>
 
       
     </div>
@@ -349,6 +367,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/21/css-flex/" rel="prev" title="css-flex">
+                css-flex <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -425,7 +447,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -471,7 +493,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router与component属性结合使用时，如何传参数参考链接"><span class="nav-number">1.</span> <span class="nav-text">router与component属性结合使用时，如何传参数参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何复用组件参考链接"><span class="nav-number">2.</span> <span class="nav-text">如何复用组件参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#router与component属性结合使用时，如何传参数参考链接"><span class="nav-number">1.</span> <span class="nav-text">router与component属性结合使用时，如何传参数参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何复用组件参考链接"><span class="nav-number">2.</span> <span class="nav-text">如何复用组件参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何操作dom-参考链接"><span class="nav-number">3.</span> <span class="nav-text">如何操作dom 参考链接</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体属性改变时，采取重新渲染，使用shouldComponentUpdate"><span class="nav-number">4.</span> <span class="nav-text">具体属性改变时，采取重新渲染，使用shouldComponentUpdate</span></a></li></ol></div>
             
 
           </div>
