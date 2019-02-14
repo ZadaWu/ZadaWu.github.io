@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="js,正则,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
-<meta name="keywords" content="js,正则">
+<meta name="description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js 正则表达式">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/js-正则表达式/index.html">
+<meta property="og:title" content="sass">
+<meta property="og:url" content="http://yoursite.com/2019/02/14/sass/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
+<meta property="og:description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-02-14T03:26:50.916Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js 正则表达式">
-<meta name="twitter:description" content="去掉首尾空格osfipin.replace(/(^\s*)|(\s*$)/g, &amp;quot;&amp;quot;);">
+<meta name="twitter:title" content="sass">
+<meta name="twitter:description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/24/js-正则表达式/">
+  <link rel="canonical" href="http://yoursite.com/2019/02/14/sass/">
 
 
 
 
 
-  <title>js 正则表达式 | Hexo</title>
+  <title>sass | Hexo</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/js-正则表达式/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/sass/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js 正则表达式</h1>
+          <h1 class="post-title" itemprop="name headline">sass</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T14:30:47+08:00">
-                2018-12-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-14T11:05:21+08:00">
+                2019-02-14
               </time>
             
 
@@ -308,7 +308,56 @@
       
 
       
-        <h2 id="去掉首尾空格"><a href="#去掉首尾空格" class="headerlink" title="去掉首尾空格"></a>去掉首尾空格</h2><p><code>osfipin.replace(/(^\s*)|(\s*$)/g, &quot;&quot;);</code></p>
+        <h2 id="变量的声明与使用"><a href="#变量的声明与使用" class="headerlink" title="变量的声明与使用"></a>变量的声明与使用</h2><p>`$main-fonts: Arial, sans-serif;<br>$headings-color: green;</p>
+<p>//To use variables:<br>h1 {<br>  font-family: $main-fonts;<br>  color: $headings-color;<br>}`</p>
+<h2 id="mixins指令的使用"><a href="#mixins指令的使用" class="headerlink" title="mixins指令的使用"></a>mixins指令的使用</h2><p><code>@mixin box-shadow($x, $y, $blur, $c){ 
+  -webkit-box-shadow: $x, $y, $blur, $c;
+  -moz-box-shadow: $x, $y, $blur, $c;
+  -ms-box-shadow: $x, $y, $blur, $c;
+  box-shadow: $x, $y, $blur, $c;
+}
+div {
+  @include box-shadow(0px, 0px, 4px, #fff);
+}</code></p>
+<h2 id="if判断指令的使用"><a href="#if判断指令的使用" class="headerlink" title="if判断指令的使用"></a>if判断指令的使用</h2><p><code>@mixin text-effect($val) {
+  @if $val == danger {
+    color: red;
+  }
+  @else if $val == alert {
+    color: yellow;
+  }
+  @else if $val == success {
+    color: green;
+  }
+  @else {
+    color: black;
+  }
+}</code></p>
+<h2 id="for循环指令的使用"><a href="#for循环指令的使用" class="headerlink" title="for循环指令的使用"></a>for循环指令的使用</h2><p>`<style type="text/sass"><br>  @for $j from 1 to 6 {<br>    .text-#{$j} { font-size: 10px*$j; }<br>  }<br></style></p>
+<p></p><p class="text-1">Hello</p><p></p>
+<p></p><p class="text-2">Hello</p><p></p>
+<p></p><p class="text-3">Hello</p><p></p>
+<p></p><p class="text-4">Hello</p><p></p>
+<p></p><p class="text-5">Hello</p>`<p></p>
+<h2 id="map遍历指令的使用"><a href="#map遍历指令的使用" class="headerlink" title="map遍历指令的使用"></a>map遍历指令的使用</h2><p>在每次迭代时，变量将从列表或映射分配给当前值。<br><code>@each $color in blue, red, green {
+  .#{$color}-text {color: $color;}
+}</code><br>迭代的语法有不通，也可以这样写<br>`$colors: (color1: blue, color2: red, color3: green);</p>
+<p>@each $key, $color in $colors {<br>  .#{$color}-text {color: $color;}<br>}<br>`</p>
+<h2 id="while循环质量的使用"><a href="#while循环质量的使用" class="headerlink" title="while循环质量的使用"></a>while循环质量的使用</h2><p>@for挑战给出了一个创建简单网格系统的示例。这也适用于@while。<br>首先，定义变量$ x并将其设置为1.接下来，使用@while指令创建网格系统，而$ x小于13。<br><code>$x: 1;
+@while $x &lt; 13 {
+  .col-#{$x} { width: 100%/12 * $x;}
+  $x: $x + 1;
+}</code></p>
+<h2 id="引用变量文件-mixins-scss"><a href="#引用变量文件-mixins-scss" class="headerlink" title="引用变量文件_mixins.scss"></a>引用变量文件_mixins.scss</h2><p>@import ‘mixins’</p>
+<p>##将一组CSS样式扩展到另一个元素<br>例如，下面的CSS规则块为.panel类设置样式。它有背景颜色，高度和边框。<br><code>.panel{
+  background-color: red;
+  height: 70px;
+  border: 2px solid green;
+}</code><br>现在你想要另一个名为.big-panel的面板。它具有与.panel相同的基本属性，但也需要宽度和字体大小。<br>extend指令是一种重用为一个元素编写的规则的简单方法，然后为另一个元素添加更多：<br><code>.big-panel{
+  @extend .panel;
+  width: 150px;
+  font-size: 2em;
+}</code></p>
 
       
     </div>
@@ -324,14 +373,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/正则/" rel="tag"># 正则</a>
-          
-        </div>
-      
 
       
       
@@ -341,8 +382,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/css-之-animation/" rel="next" title="css 之 animation, transform">
-                <i class="fa fa-chevron-left"></i> css 之 animation, transform
+              <a href="/2019/02/13/函数式编程/" rel="next" title="函数式编程">
+                <i class="fa fa-chevron-left"></i> 函数式编程
               </a>
             
           </div>
@@ -350,10 +391,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/24/js-字符串转dom节点/" rel="prev" title="js 字符串转dom节点">
-                js 字符串转dom节点 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -476,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#去掉首尾空格"><span class="nav-number">1.</span> <span class="nav-text">去掉首尾空格</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#变量的声明与使用"><span class="nav-number">1.</span> <span class="nav-text">变量的声明与使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#mixins指令的使用"><span class="nav-number">2.</span> <span class="nav-text">mixins指令的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#if判断指令的使用"><span class="nav-number">3.</span> <span class="nav-text">if判断指令的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#for循环指令的使用"><span class="nav-number">4.</span> <span class="nav-text">for循环指令的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#map遍历指令的使用"><span class="nav-number">5.</span> <span class="nav-text">map遍历指令的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#while循环质量的使用"><span class="nav-number">6.</span> <span class="nav-text">while循环质量的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用变量文件-mixins-scss"><span class="nav-number">7.</span> <span class="nav-text">引用变量文件_mixins.scss</span></a></li></ol></div>
             
 
           </div>
