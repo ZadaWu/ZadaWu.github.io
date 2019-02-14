@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
+<meta name="description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass">
 <meta property="og:url" content="http://yoursite.com/2019/02/14/sass/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
+<meta property="og:description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-14T03:26:50.916Z">
+<meta property="og:updated_time" content="2019-02-14T03:33:10.021Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass">
-<meta name="twitter:description" content="变量的声明与使用`$main-fonts: Arial, sans-serif;$headings-color: green; //To use variables:h1 {  font-family: $main-fonts;  color: $headings-color;}` mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -webki">
+<meta name="twitter:description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
 
 
 
@@ -308,8 +308,13 @@
       
 
       
-        <h2 id="变量的声明与使用"><a href="#变量的声明与使用" class="headerlink" title="变量的声明与使用"></a>变量的声明与使用</h2><p>`$main-fonts: Arial, sans-serif;<br>$headings-color: green;</p>
-<p>//To use variables:<br>h1 {<br>  font-family: $main-fonts;<br>  color: $headings-color;<br>}`</p>
+        <h2 id="变量的声明与使用"><a href="#变量的声明与使用" class="headerlink" title="变量的声明与使用"></a>变量的声明与使用</h2><p><code>$main-fonts: Arial, sans-serif;
+$headings-color: green;
+//To use variables:
+h1 {
+  font-family: $main-fonts;
+  color: $headings-color;
+}</code></p>
 <h2 id="mixins指令的使用"><a href="#mixins指令的使用" class="headerlink" title="mixins指令的使用"></a>mixins指令的使用</h2><p><code>@mixin box-shadow($x, $y, $blur, $c){ 
   -webkit-box-shadow: $x, $y, $blur, $c;
   -moz-box-shadow: $x, $y, $blur, $c;
@@ -333,12 +338,11 @@ div {
     color: black;
   }
 }</code></p>
-<h2 id="for循环指令的使用"><a href="#for循环指令的使用" class="headerlink" title="for循环指令的使用"></a>for循环指令的使用</h2><p>`<style type="text/sass"><br>  @for $j from 1 to 6 {<br>    .text-#{$j} { font-size: 10px*$j; }<br>  }<br></style></p>
-<p></p><p class="text-1">Hello</p><p></p>
-<p></p><p class="text-2">Hello</p><p></p>
-<p></p><p class="text-3">Hello</p><p></p>
-<p></p><p class="text-4">Hello</p><p></p>
-<p></p><p class="text-5">Hello</p>`<p></p>
+<h2 id="for循环指令的使用"><a href="#for循环指令的使用" class="headerlink" title="for循环指令的使用"></a>for循环指令的使用</h2><p><code>&lt;style type=&#39;text/sass&#39;&gt;
+  @for $j from 1 to 6 {
+    .text-#{$j} { font-size: 10px*$j; }
+  }
+&lt;/style&gt;</code></p>
 <h2 id="map遍历指令的使用"><a href="#map遍历指令的使用" class="headerlink" title="map遍历指令的使用"></a>map遍历指令的使用</h2><p>在每次迭代时，变量将从列表或映射分配给当前值。<br><code>@each $color in blue, red, green {
   .#{$color}-text {color: $color;}
 }</code><br>迭代的语法有不通，也可以这样写<br>`$colors: (color1: blue, color2: red, color3: green);</p>
@@ -348,7 +352,7 @@ div {
   .col-#{$x} { width: 100%/12 * $x;}
   $x: $x + 1;
 }</code></p>
-<h2 id="引用变量文件-mixins-scss"><a href="#引用变量文件-mixins-scss" class="headerlink" title="引用变量文件_mixins.scss"></a>引用变量文件_mixins.scss</h2><p>@import ‘mixins’</p>
+<h2 id="引用变量文件-mixins-scss"><a href="#引用变量文件-mixins-scss" class="headerlink" title="引用变量文件_mixins.scss"></a>引用变量文件_mixins.scss</h2><p><code>@import &#39;mixins&#39;</code></p>
 <p>##将一组CSS样式扩展到另一个元素<br>例如，下面的CSS规则块为.panel类设置样式。它有背景颜色，高度和边框。<br><code>.panel{
   background-color: red;
   height: 70px;
