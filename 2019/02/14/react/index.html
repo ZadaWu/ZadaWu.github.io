@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next muse" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="创建一个简单的jsx简介：React是由Facebook创建和维护的开源视图库。它是渲染现代Web应用程序的用户界面（UI）的绝佳工具。React使用名为JSX的JavaScript语法扩展，允许您直接在JavaScript中编写HTML。这有几个好处。它允许您在HTML中使用JavaScript的完整程序功能，并有助于保持代码的可读性。在大多数情况下，JSX与您已经学过的HTML类似，但是在这些">
+<meta name="keywords" content="Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react">
+<meta property="og:url" content="http://yoursite.com/2019/02/14/react/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="创建一个简单的jsx简介：React是由Facebook创建和维护的开源视图库。它是渲染现代Web应用程序的用户界面（UI）的绝佳工具。React使用名为JSX的JavaScript语法扩展，允许您直接在JavaScript中编写HTML。这有几个好处。它允许您在HTML中使用JavaScript的完整程序功能，并有助于保持代码的可读性。在大多数情况下，JSX与您已经学过的HTML类似，但是在这些">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-13T12:09:15.673Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="react">
+<meta name="twitter:description" content="创建一个简单的jsx简介：React是由Facebook创建和维护的开源视图库。它是渲染现代Web应用程序的用户界面（UI）的绝佳工具。React使用名为JSX的JavaScript语法扩展，允许您直接在JavaScript中编写HTML。这有几个好处。它允许您在HTML中使用JavaScript的完整程序功能，并有助于保持代码的可读性。在大多数情况下，JSX与您已经学过的HTML类似，但是在这些">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/02/14/react/">
+
+
+
+
+
+  <title>react | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/react/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="大大虾">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">react</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-14T11:30:10+08:00">
+                2019-02-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="创建一个简单的jsx"><a href="#创建一个简单的jsx" class="headerlink" title="创建一个简单的jsx"></a>创建一个简单的jsx</h2><p>简介：React是由Facebook创建和维护的开源视图库。它是渲染现代Web应用程序的用户界面（UI）的绝佳工具。<br>React使用名为JSX的JavaScript语法扩展，允许您直接在JavaScript中编写HTML。这有几个好处。它允许您在HTML中使用JavaScript的完整程序功能，并有助于保持代码的可读性。在大多数情况下，JSX与您已经学过的HTML类似，但是在这些挑战中将会涉及一些关键差异。<br>例如，因为JSX是JavaScript的语法扩展，所以您实际上可以直接在JSX中编写JavaScript。<br>但是，由于JSX不是有效的JavaScript，因此必须将JSX代码编译为JavaScript。转换器Babel是这个过程的流行工具。<br><code>ReactDOM.render(JSX, document.getElementById(&#39;root&#39;))。</code>这个函数调用是将JSX置于React自己的DOM轻量级表示中的原因。然后，React使用自己的DOM快照来优化仅更新实际DOM的特定部分。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const JSX = &lt;h1&gt;Hello JSX!&lt;/h1&gt;;</span><br></pre></td></tr></table></figure>
+<h2 id="创建一个复杂的jsx"><a href="#创建一个复杂的jsx" class="headerlink" title="创建一个复杂的jsx"></a>创建一个复杂的jsx</h2><p>关于嵌套JSX的一个重要事项是它必须返回一个元素。 这个父元素将包装所有其他级别的嵌套元素。</p>
+<h2 id="在jsx中加注释"><a href="#在jsx中加注释" class="headerlink" title="在jsx中加注释"></a>在jsx中加注释</h2><p>SX是一种可以编译成有效JavaScript的语法。有时，为了便于阅读，您可能需要在代码中添加注释。像大多数编程语言一样，JSX有自己的方法来做到这一点。<br>要将注释放在JSX中，可以使用语法{/ <em> </em> /}来包含注释文本。</p>
+<h2 id="将HTML元素渲染到DOM"><a href="#将HTML元素渲染到DOM" class="headerlink" title="将HTML元素渲染到DOM"></a>将HTML元素渲染到DOM</h2><p>到目前为止，您已经了解到JSX是一种在JavaScript中编写可读HTML的便捷工具。使用React，我们可以使用React的渲染API（称为ReactDOM）将此JSX直接渲染到HTML DOM。<br>ReactDOM提供了一种将React元素呈现给DOM的简单方法，如下所示：ReactDOM.render（componentToRender，targetNode）,其中第一个参数是要渲染的React元素或组件，第二个参数是要将组件渲染到的DOM节点。<br>正如您所料，必须在JSX元素声明之后调用ReactDOM.render（），就像在使用它们之前必须声明变量一样。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const JSX = (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;Hello World&lt;/h1&gt;</span><br><span class="line">    &lt;p&gt;Lets render this to the DOM&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">);</span><br><span class="line">// change code below this line</span><br><span class="line">ReactDOM.render(JSX, document.getElementById(&apos;challenge-node&apos;))</span><br></pre></td></tr></table></figure>
+<h2 id="在JSX中定义HTML类"><a href="#在JSX中定义HTML类" class="headerlink" title="在JSX中定义HTML类"></a>在JSX中定义HTML类</h2><p>现在您已经开始编写JSX了，您可能想知道它与HTML的区别。 到目前为止，似乎HTML和JSX完全相同。<br>JSX的一个关键区别是你不能再使用单词class来定义HTML类。这是因为class是JavaScript中的保留字。相反，JSX使用className。<br>事实上，JSX中所有HTML属性和事件引用的命名约定都变成了camelCase。例如，JSX中的单击事件是onClick，而不是onclick。同样，onchange变为onChange。虽然这是一个微妙的差异，但重要的是要记住前进。</p>
+<figure class="highlight plain"><figcaption><span>JSX </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  &lt;div className=&quot;myDiv&quot;&gt; </span><br><span class="line">    &lt;h1&gt;Add a class to this div&lt;/h1&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="了解自我关闭的JSX标签"><a href="#了解自我关闭的JSX标签" class="headerlink" title="了解自我关闭的JSX标签"></a>了解自我关闭的JSX标签</h2><p>到目前为止，您已经看到JSX与HTML的不同之处在于使用className与class来定义HTML类。<br>JSX与HTML的另一个重要区分是自闭标签。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在HTML中，几乎所有标签都有开始和结束标签：&lt;div&gt; &lt;/ div&gt;;结束标记在您要关闭的标记名称之前始终具有正斜杠。但是，HTML中有一些称为“自关闭标记”的特殊实例，或者在另一个标记可以启动之前不需要开始和结束标记的标记。</span><br><span class="line">例如，换行标记可以写成&lt;br&gt;或&lt;br /&gt;，但不应该写为&lt;br&gt; &lt;/ br&gt;，因为它不包含任何内容。</span><br><span class="line">在JSX中，规则略有不同。任何JSX元素都可以使用自闭合标记编写，并且必须关闭每个元素。例如，换行标记必须始终写为&lt;br /&gt;才能成为可以转换的有效JSX。</span><br><span class="line">另一方面，&lt;div&gt;可以写为&lt;div /&gt;或&lt;div&gt; &lt;/ div&gt;。不同之处在于，在第一个语法版本中，无法在&lt;div /&gt;中包含任何内容。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const JSX = (</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h2&gt;Welcome to React!&lt;/h2&gt; &lt;br/&gt;</span><br><span class="line">    &lt;p&gt;Be sure to close all tags!&lt;/p&gt;</span><br><span class="line">    &lt;hr/&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h2 id="创建无状态功能组件"><a href="#创建无状态功能组件" class="headerlink" title="创建无状态功能组件"></a>创建无状态功能组件</h2><p>组件是React的核心。 React中的所有内容都是一个组件，在这里您将学习如何创建一个组件。<br>有两种方法可以创建React组件。第一种方法是使用JavaScript函数。以这种方式定义组件会创建无状态功能组件。应用程序中的状态概念将在以后的挑战中介绍。现在，将无状态组件视为可以接收数据并对其进行渲染的组件，但不管理或跟踪对该数据的更改。 （我们将介绍在下一次挑战中创建React组件的第二种方法。）<br>要使用函数创建组件，只需编写一个返回JSX或null的JavaScript函数。需要注意的一件重要事情是，React要求您的函数名称以大写字母开头。这是一个在JSX中分配HTML类的无状态功能组件的示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// After being transpiled, the &lt;div&gt; will have a CSS class of &apos;customClass&apos;</span><br><span class="line">const DemoComponent = function() &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div className=&apos;customClass&apos; /&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>因为JSX组件代表HTML，所以您可以将几个组件放在一起以创建更复杂的HTML页面。这是React提供的组件架构的关键优势之一。它允许您从许多独立的独立组件中组合UI。这使得构建和维护复杂的用户界面变得更加容易。无状态功能组件又称为纯组件SFC</p>
+<h2 id="创建有状态的react组件"><a href="#创建有状态的react组件" class="headerlink" title="创建有状态的react组件"></a>创建有状态的react组件</h2><p>定义React组件的另一种方法是使用ES6类语法。在以下示例中，Kitten扩展了React.Component：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">class Kitten extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;h1&gt;Hi&lt;/h1&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这将创建一个ES6类Kitten，它扩展了React.Component类。因此，Kitten类现在可以访问许多有用的React功能，例如本地状态和生命周期钩子。如果您还不熟悉这些术语，请不要担心，在以后的挑战中将更详细地介绍它们。<br>另请注意，Kitten类在其中定义了一个调用super（）的构造函数。它使用super（）来调用父类的构造函数，在本例中为React.Component。构造函数是在使用class关键字创建的对象初始化期间使用的特殊方法。最好使用super调用组件的构造函数，并将props传递给它们.这可确保组件正确初始化。现在，知道包含此代码是标准的。很快你会看到构造函数和道具的其他用途。</p>
+<h2 id="在父组件中调用子组件"><a href="#在父组件中调用子组件" class="headerlink" title="在父组件中调用子组件"></a>在父组件中调用子组件</h2><p>现在我们来看看如何组合多个React组件。想象一下，您正在构建一个应用程序并创建了三个组件，一个Navbar，Dashboard和Footer。<br>要将这些组件组合在一起，您可以创建一个App父组件，它将这三个组件中的每一个都呈现为子组件。要在React组件中将组件呈现为子组件，您在JSX中包含作为自定义HTML标记编写的组件名称。例如，在render方法中，您可以编写：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">return (</span><br><span class="line">&lt;App&gt;</span><br><span class="line">  &lt;Navbar /&gt;</span><br><span class="line">  &lt;Dashboard /&gt;</span><br><span class="line">  &lt;Footer /&gt;</span><br><span class="line">&lt;/App&gt;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h2 id="使用React渲染嵌套组件"><a href="#使用React渲染嵌套组件" class="headerlink" title="使用React渲染嵌套组件"></a>使用React渲染嵌套组件</h2><p>组件组合是React强大的功能之一。当您使用React时，重要的是开始根据组件（如上一个挑战中的App示例）考虑您的用户界面。您将UI分解为其基本构建块，这些块成为组件。这有助于将负责UI的代码与负责处理应用程序逻辑的代码分开。它可以大大简化复杂项目的开发和维护。</p>
+<h2 id="从头开始写一个React组件"><a href="#从头开始写一个React组件" class="headerlink" title="从头开始写一个React组件"></a>从头开始写一个React组件</h2><p>请记住，典型的React组件是扩展React.Component的ES6类。它有一个返回HTML（来自JSX）或null的render方法。这是React组件的基本形式。一旦你理解了这一点，你就会准备开始构建更复杂的React项目。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class MyComponent extends  React.Component&#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (&lt;h1&gt;My First React Component!&lt;/h1&gt;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;MyComponent/&gt;, document.getElementById(&apos;challenge-node&apos;));</span><br></pre></td></tr></table></figure>
+<h2 id="将属性传递给无状态功能组件"><a href="#将属性传递给无状态功能组件" class="headerlink" title="将属性传递给无状态功能组件"></a>将属性传递给无状态功能组件</h2><p>有了这个基础，现在是时候看看React中常见的另一个特性：道具。在React中，您可以将props或属性传递给子组件。你有一个App组件，它呈现一个名为Welcome的子组件，它是一个无状态的功能组件。您可以通过编写以下方式传递欢迎用户属性：<br>先定义无状态组件,{Date()}为获取当前日期：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">const CurrentDate = (props) =&gt; &#123;</span><br><span class="line">  return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;p&gt;The current date is: &#123;props.date&#125;&lt;/p&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">class Calendar extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;h3&gt;What date is it?&lt;/h3&gt;</span><br><span class="line">        &lt;CurrentDate date=&#123;Date()&#125;/&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="传一个数组作为参数"><a href="#传一个数组作为参数" class="headerlink" title="传一个数组作为参数"></a>传一个数组作为参数</h2><p>着眼于如何将数组作为道具传递。要将数组传递给JSX元素，必须将其视为JavaScript并用大括号括起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  &lt;ChildComponent colors=&#123;[&quot;green&quot;, &quot;blue&quot;, &quot;red&quot;]&#125; /&gt;</span><br><span class="line">&lt;/ParentComponent&gt;</span><br></pre></td></tr></table></figure>
+<p>然后子组件可以访问数组属性颜色。访问属性时可以使用诸如join（）之类的数组方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const ChildComponent = (props) =&gt; &lt;p&gt;&#123;props.colors.join(&apos;, &apos;)&#125;&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<p>这会将所有颜色数组项连接成逗号分隔的字符串并生成：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;green, blue, red&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="使用默认属性"><a href="#使用默认属性" class="headerlink" title="使用默认属性"></a>使用默认属性</h2><p>React还有一个设置默认道具的选项。您可以将默认道具分配给组件作为组件本身的属性，如果需要，React会分配默认属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyComponent.defaultProps = &#123; location: &apos;San Francisco&apos; &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="覆盖默认属性"><a href="#覆盖默认属性" class="headerlink" title="覆盖默认属性"></a>覆盖默认属性</h2><p>直接传具体值过去，以下覆盖了quantity的默认为0的属性值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const Items = (props) =&gt; &#123;</span><br><span class="line">  return &lt;h1&gt;Current Quantity of Items in Cart: &#123;props.quantity&#125;&lt;/h1&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Items.defaultProps = &#123;</span><br><span class="line">  quantity: 0</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class ShoppingCart extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return &lt;Items quantity=&#123;10&#125;/&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="使用PropTypes定义您期望的属性-参考"><a href="#使用PropTypes定义您期望的属性-参考" class="headerlink" title="使用PropTypes定义您期望的属性,参考"></a>使用PropTypes定义您期望的属性,<a href="https://reactjs.org/docs/typechecking-with-proptypes.html" target="_blank" rel="noopener">参考</a></h2><p>您可以在组件上设置propTypes，以要求数据类型为数组。当数据是任何其他类型时，这将发出有用的警告。<br>当您提前知道道具类型时，设置propTypes被认为是最佳做法。您可以使用与定义defaultProps相同的方式为组件定义propTypes属性。这样做将检查给定键的道具是否存在给定类型。这是一个需要类型函数的示例，名为handleClick的prop：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MyComponent.propTypes = &#123; handleClick: PropTypes.func.isRequired &#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的示例中，PropTypes.func部分检查handleClick是否为函数。添加isRequired告诉React handleClick是该组件的必需属性。如果未提供该属性，您将看到警告。还要注意func代表函数。在七种JavaScript原语类型中，函数和布尔值（写为bool）是唯一使用异常拼写的两种类型。除了原始类型之外，还有其他类型可用。例如，您可以检查prop是否为React元素。有关所有选项，请参阅文档：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">optionalArray: PropTypes.array,</span><br><span class="line">optionalBool: PropTypes.bool,</span><br><span class="line">optionalFunc: PropTypes.func,</span><br><span class="line">optionalNumber: PropTypes.number,</span><br><span class="line">optionalObject: PropTypes.object,</span><br><span class="line">optionalString: PropTypes.string,</span><br><span class="line">optionalSymbol: PropTypes.symbol,</span><br></pre></td></tr></table></figure>
+<h2 id="使用this-props来访问属性"><a href="#使用this-props来访问属性" class="headerlink" title="使用this.props来访问属性"></a>使用this.props来访问属性</h2><p>无论何时在您自己引用类组件时，都使用this关键字。要访问类组件中的props，请在前面使用此代码来访问它。例如，如果ES6类组件具有名为data的prop，则在JSX中编写{this.props.data}。</p>
+<h2 id="检查使用无状态功能组件的属性"><a href="#检查使用无状态功能组件的属性" class="headerlink" title="检查使用无状态功能组件的属性"></a>检查使用无状态功能组件的属性</h2><p>无状态功能组件是您编写的任何接受道具并返回JSX的函数。另一方面，无状态组件是扩展React.Component的类，但不使用内部状态（在下一个挑战中涵盖）。最后，有状态组件是保持其自身内部状态的任何组件。您可能会看到有状态组件简称为组件或React组件。</p>
+<p>一种常见的模式是尽可能地减少有状态并创建无状态功能组件。这有助于将状态管理包含到应用程序的特定区域。反过来，通过更容易地了解状态更改如何影响其行为，这可以改善应用程序的开发和维护。</p>
+<h2 id="创建有state的组件"><a href="#创建有state的组件" class="headerlink" title="创建有state的组件"></a>创建有state的组件</h2><p>React最重要的主题之一是state。 State包含应用程序需要了解的任何数据，这些数据可能会随时间而变化。您希望应用程序响应状态更改并在必要时显示更新的UI。 React为现代Web应用程序的状态管理提供了一个很好的解决方案</p>
+<p>您可以通过在构造函数中声明组件类的状态属性来在React组件中创建状态。这会在创建组件时使用状态初始化组件。必须将state属性设置为JavaScript对象。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.state = &#123;</span><br><span class="line">  // describe your state here</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>您可以在组件的整个生命周期内访问状态对象。您可以更新它，在UI中呈现它，并将其作为道具传递给子组件。状态对象可以像您需要的那样复杂或简单。请注意，您必须通过扩展React.Component来创建类组件，以便创建这样的状态。</p>
+<h2 id="在UI上渲染state"><a href="#在UI上渲染state" class="headerlink" title="在UI上渲染state"></a>在UI上渲染state</h2><p>定义组件的初始状态后，可以在呈现的UI中显示它的任何部分。如果组件是有状态的，它将始终可以访问其render（）方法中的状态数据。您可以使用this.state访问数据。<br>如果要在render方法的返回中访问状态值，则必须将值括在花括号中。<br>State是React中组件最强大的功能之一。它允许您跟踪应用程序中的重要数据并呈现UI以响应此数据中的更改。如果您的数据发生变化，您的UI将会发生变化。React使用所谓的虚拟DOM来跟踪幕后的变化。当状态数据更新时，它会触发使用该数据重新呈现组件 - 包括作为属性接收数据的子组件。React更新实际DOM，但仅在必要时更新。这意味着您不必担心更改DOM。您只需声明UI应该是什么样子。<br>请注意，如果使组件成为有状态，则其他任何组件都不会知道其状态。除非您将状态数据作为props传递给子组件，否则它的状态是完全封装的，或者是该组件的本地状态。这种封装状态的概念非常重要，因为它允许您编写某些逻辑，然后在代码中的某个位置包含和隔离该逻辑。</p>
+<h2 id="用户界面中的渲染状态另一种方式"><a href="#用户界面中的渲染状态另一种方式" class="headerlink" title="用户界面中的渲染状态另一种方式"></a>用户界面中的渲染状态另一种方式</h2><p>还有另一种访问组件状态的方法。在render（）方法中，在return语句之前，您可以直接编写JavaScript。例如，你可以声明函数，从state或props访问数据，对此数据执行计算，等等。然后，您可以将任何数据分配给您可以在return语句中访问的变量。</p>
+<h2 id="使用this-setState设置状态"><a href="#使用this-setState设置状态" class="headerlink" title="使用this.setState设置状态"></a>使用this.setState设置状态</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">this.setState(&#123;</span><br><span class="line">  itemCount: this.state.itemCount + 1</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h2 id="在class类方法中绑定this"><a href="#在class类方法中绑定this" class="headerlink" title="在class类方法中绑定this"></a>在class类方法中绑定this</h2><p>除了设置和更新状态外，您还可以为组件类定义方法。类方法通常需要使用this关键字，以便它可以访问方法范围内的类（例如state和props）上的属性。有几种方法可以让您的类方法访问它。<br>一种常见的方法是在构造函数中显式绑定它，以便在初始化组件时绑定到类方法。您可能已经注意到最后一个挑战使用this.handleClick = this.handleClick.bind（this）作为构造函数中的handleClick方法。然后，当您在类方法中调用类似this.setState（）的函数时，这将引用该类，并且不会被定义。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class MyComponent extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      itemCount: 0</span><br><span class="line">    &#125;;</span><br><span class="line">    this.addItem = this.addItem.bind(this);</span><br><span class="line">  &#125;</span><br><span class="line">  addItem() &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      itemCount: this.state.itemCount + 1</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123; /* change code below this line */ &#125;</span><br><span class="line">        &lt;button onClick=&#123;this.addItem&#125;&gt;Click Me&lt;/button&gt;</span><br><span class="line">        &#123; /* change code above this line */ &#125;</span><br><span class="line">        &lt;h1&gt;Current Item Count: &#123;this.state.itemCount&#125;&lt;/h1&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="及时显示input内容值"><a href="#及时显示input内容值" class="headerlink" title="及时显示input内容值"></a>及时显示input内容值</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">class ControlledInput extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      input: &apos;&apos;</span><br><span class="line">    &#125;;</span><br><span class="line">    // change code below this line</span><br><span class="line">    this.handleChange = this.handleChange.bind(this);</span><br><span class="line">    // change code above this line</span><br><span class="line">  &#125;</span><br><span class="line">  // change code below this line</span><br><span class="line">  handleChange(event) &#123;</span><br><span class="line">    this.setState(&#123;</span><br><span class="line">      input: event.target.value</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">  // change code above this line</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &#123; /* change code below this line */&#125;</span><br><span class="line">        &lt;input onChange=&#123;this.handleChange&#125; value=&#123;this.state.input&#125;/&gt;</span><br><span class="line">        &#123; /* change code above this line */&#125;</span><br><span class="line">        &lt;h4&gt;Controlled Input:&lt;/h4&gt;</span><br><span class="line">        &lt;p&gt;&#123;this.state.input&#125;&lt;/p&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="使用state给子组件传参数"><a href="#使用state给子组件传参数" class="headerlink" title="使用state给子组件传参数"></a>使用state给子组件传参数</h2><figure class="highlight plain"><figcaption><span>MyApp extends React.Component &#123;</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">    this.state = &#123;</span><br><span class="line">      name: &apos;CamperBot&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">       &lt;div&gt;</span><br><span class="line">         &lt;Navbar name=&#123;this.state.name&#125; /&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">class Navbar extends React.Component &#123;</span><br><span class="line">  constructor(props) &#123;</span><br><span class="line">    super(props);</span><br><span class="line">  &#125;</span><br><span class="line">  render() &#123;</span><br><span class="line">    return (</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">      &lt;h1&gt;Hello, my name is: &#123;this.props.name&#125; &lt;/h1&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/14/sass/" rel="next" title="sass">
+                <i class="fa fa-chevron-left"></i> sass
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/18/react-vs-angularjs-vs-vue/" rel="prev" title="react vs angularjs vs vue">
+                react vs angularjs vs vue <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">大大虾</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个简单的jsx"><span class="nav-number">1.</span> <span class="nav-text">创建一个简单的jsx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建一个复杂的jsx"><span class="nav-number">2.</span> <span class="nav-text">创建一个复杂的jsx</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在jsx中加注释"><span class="nav-number">3.</span> <span class="nav-text">在jsx中加注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将HTML元素渲染到DOM"><span class="nav-number">4.</span> <span class="nav-text">将HTML元素渲染到DOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在JSX中定义HTML类"><span class="nav-number">5.</span> <span class="nav-text">在JSX中定义HTML类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#了解自我关闭的JSX标签"><span class="nav-number">6.</span> <span class="nav-text">了解自我关闭的JSX标签</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建无状态功能组件"><span class="nav-number">7.</span> <span class="nav-text">创建无状态功能组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建有状态的react组件"><span class="nav-number">8.</span> <span class="nav-text">创建有状态的react组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在父组件中调用子组件"><span class="nav-number">9.</span> <span class="nav-text">在父组件中调用子组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用React渲染嵌套组件"><span class="nav-number">10.</span> <span class="nav-text">使用React渲染嵌套组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从头开始写一个React组件"><span class="nav-number">11.</span> <span class="nav-text">从头开始写一个React组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将属性传递给无状态功能组件"><span class="nav-number">12.</span> <span class="nav-text">将属性传递给无状态功能组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传一个数组作为参数"><span class="nav-number">13.</span> <span class="nav-text">传一个数组作为参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用默认属性"><span class="nav-number">14.</span> <span class="nav-text">使用默认属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#覆盖默认属性"><span class="nav-number">15.</span> <span class="nav-text">覆盖默认属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用PropTypes定义您期望的属性-参考"><span class="nav-number">16.</span> <span class="nav-text">使用PropTypes定义您期望的属性,参考</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用this-props来访问属性"><span class="nav-number">17.</span> <span class="nav-text">使用this.props来访问属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#检查使用无状态功能组件的属性"><span class="nav-number">18.</span> <span class="nav-text">检查使用无状态功能组件的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建有state的组件"><span class="nav-number">19.</span> <span class="nav-text">创建有state的组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在UI上渲染state"><span class="nav-number">20.</span> <span class="nav-text">在UI上渲染state</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用户界面中的渲染状态另一种方式"><span class="nav-number">21.</span> <span class="nav-text">用户界面中的渲染状态另一种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用this-setState设置状态"><span class="nav-number">22.</span> <span class="nav-text">使用this.setState设置状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在class类方法中绑定this"><span class="nav-number">23.</span> <span class="nav-text">在class类方法中绑定this</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#及时显示input内容值"><span class="nav-number">24.</span> <span class="nav-text">及时显示input内容值</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用state给子组件传参数"><span class="nav-number">25.</span> <span class="nav-text">使用state给子组件传参数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">大大虾</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

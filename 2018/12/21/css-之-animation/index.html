@@ -3,7 +3,7 @@
 
 
 
-<html class="theme-next muse" lang="">
+<html class="theme-next muse" lang>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="先强烈推荐一个前端程序员可以自己练习基础的网站：https://learn.freecodecamp.org，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。 今天要分享的就是animation, 和transform transfrom属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。你可以通过transform-origin修改中心">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-14T03:33:10.021Z">
+<meta property="og:updated_time" content="2019-03-13T12:09:15.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 之 animation, transform">
 <meta name="twitter:description" content="先强烈推荐一个前端程序员可以自己练习基础的网站：https://learn.freecodecamp.org，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。 今天要分享的就是animation, 和transform transfrom属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。你可以通过transform-origin修改中心">
@@ -136,7 +136,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -146,7 +146,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -236,20 +236,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/css-之-animation/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Hexo">
     </span>
 
@@ -311,26 +311,10 @@
         <p>先强烈推荐一个前端程序员可以自己练习基础的网站：<a href="https://learn.freecodecamp.org" target="_blank" rel="noopener">https://learn.freecodecamp.org</a>，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。</p>
 <p>今天要分享的就是animation, 和transform</p>
 <h2 id="transfrom"><a href="#transfrom" class="headerlink" title="transfrom"></a>transfrom</h2><p>属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。<br>你可以通过transform-origin修改中心点位置，比如：<br>transform-origin: bottom left;-中心点为左下角位置角<br>transform-origin: 50px 70px; -中心点位置有中间移到了距离左侧50像素，顶部70像素的地方</p>
-<ul>
-<li>scale(x,y) 放大／缩小倍数</li>
-<li>rotate(deg) 旋转角度</li>
-<li>skewX(xdeg) 横向拉升 </li>
-<li>skewY(ydeg) 纵向拉升</li>
-<li>skew(xdeg, ydeg) 横纵向都拉伸</li>
-<li>translate(x, y) 原点向右或向下挪动</li>
-<li>matrix(a, b, c, d, e, f) 理解成3*3矩阵，原点位置x, y, 则实际x变化位置为ax+cy+e,y变化位置为bx+dy+f,等同于transform: translate(ax+cy+e+’px’, bx+dy+f+’px’) <a href="https://segmentfault.com/a/1190000011942578" target="_blank" rel="noopener">详情请点击</a></li>
-<li>matrix3d() 3D变换 4*4矩阵</li>
-</ul>
-<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>annimation配合keyframes一起用<br>@keyframes slidein {<br>  from { transform: scaleX(0); }<br>  to   { transform: scaleX(1); }<br>}</p>
-<ul>
-<li>animation-name  动画name</li>
-<li>animation-duration 一个动画周期的时长，单位为秒(s)或者毫秒(ms)</li>
-<li>animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear <a href="https://www.jianshu.com/p/d999f090d333" target="_blank" rel="noopener">贝塞尔曲线原理</a> <a href="http://cubic-bezier.com/#.25,.1,.25,1" target="_blank" rel="noopener">贝塞尔曲线对比</a></li>
-<li>animation-delay 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。</li>
-<li>animation-iteration-count 循环次数</li>
-<li>animation-direction 属性指示动画是否反向播放 normal／reverse／alternate／alternate-reverse</li>
-<li>animation-fill-mode 用来指定在动画执行之前和之后如何给动画的目标应用样式。 none／forwards／backwards／both／应用多个none, backwards／应用多个both, forwards, none</li>
-</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scale(x,y) 放大／缩小倍数</span><br><span class="line">rotate(deg) 旋转角度</span><br><span class="line">skewX(xdeg) 横向拉升 </span><br><span class="line">skewY(ydeg) 纵向拉升</span><br><span class="line">skew(xdeg, ydeg) 横纵向都拉伸</span><br><span class="line">translate(x, y) 原点向右或向下挪动</span><br><span class="line">matrix(a, b, c, d, e, f) 理解成3*3矩阵，原点位置x, y, 则实际x变化位置为ax+cy+e,y变化位置为bx+dy+f,等同于transform: translate(ax+cy+e+&apos;px&apos;, bx+dy+f+&apos;px&apos;) [详情请点击](https://segmentfault.com/a/1190000011942578)</span><br><span class="line">matrix3d() 3D变换 4*4矩阵</span><br></pre></td></tr></table></figure>
+<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>annimation配合keyframes一起用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@keyframes slidein &#123;</span><br><span class="line">  from &#123; transform: scaleX(0); &#125;</span><br><span class="line">  to   &#123; transform: scaleX(1); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">animation-name  动画name</span><br><span class="line">animation-duration 一个动画周期的时长，单位为秒(s)或者毫秒(ms)</span><br><span class="line">animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear [贝塞尔曲线原理](https://www.jianshu.com/p/d999f090d333) [贝塞尔曲线对比](http://cubic-bezier.com/#.25,.1,.25,1)</span><br><span class="line">animation-delay 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。</span><br><span class="line">animation-iteration-count 循环次数</span><br><span class="line">animation-direction 属性指示动画是否反向播放 normal／reverse／alternate／alternate-reverse</span><br><span class="line">animation-fill-mode 用来指定在动画执行之前和之后如何给动画的目标应用样式。 none／forwards／backwards／both／应用多个none, backwards／应用多个both, forwards, none</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -437,7 +421,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">大大虾</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -450,7 +434,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

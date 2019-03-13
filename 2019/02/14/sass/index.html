@@ -3,7 +3,7 @@
 
 
 
-<html class="theme-next muse" lang="">
+<html class="theme-next muse" lang>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
+<meta name="description" content="变量的声明与使用1234567$main-fonts: Arial, sans-serif;$headings-color: green;//To use variables:h1 &amp;#123;  font-family: $main-fonts;  color: $headings-color;&amp;#125; mixins指令的使用123456789@mixin box-shadow($x, $y">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sass">
 <meta property="og:url" content="http://yoursite.com/2019/02/14/sass/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
+<meta property="og:description" content="变量的声明与使用1234567$main-fonts: Arial, sans-serif;$headings-color: green;//To use variables:h1 &amp;#123;  font-family: $main-fonts;  color: $headings-color;&amp;#125; mixins指令的使用123456789@mixin box-shadow($x, $y">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-14T03:33:10.021Z">
+<meta property="og:updated_time" content="2019-03-13T12:09:15.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sass">
-<meta name="twitter:description" content="变量的声明与使用$main-fonts: Arial, sans-serif; $headings-color: green; //To use variables: h1 {   font-family: $main-fonts;   color: $headings-color; } mixins指令的使用@mixin box-shadow($x, $y, $blur, $c){    -we">
+<meta name="twitter:description" content="变量的声明与使用1234567$main-fonts: Arial, sans-serif;$headings-color: green;//To use variables:h1 &amp;#123;  font-family: $main-fonts;  color: $headings-color;&amp;#125; mixins指令的使用123456789@mixin box-shadow($x, $y">
 
 
 
@@ -136,7 +136,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -146,7 +146,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -236,20 +236,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/14/sass/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Hexo">
     </span>
 
@@ -308,60 +308,21 @@
       
 
       
-        <h2 id="变量的声明与使用"><a href="#变量的声明与使用" class="headerlink" title="变量的声明与使用"></a>变量的声明与使用</h2><p><code>$main-fonts: Arial, sans-serif;
-$headings-color: green;
-//To use variables:
-h1 {
-  font-family: $main-fonts;
-  color: $headings-color;
-}</code></p>
-<h2 id="mixins指令的使用"><a href="#mixins指令的使用" class="headerlink" title="mixins指令的使用"></a>mixins指令的使用</h2><p><code>@mixin box-shadow($x, $y, $blur, $c){ 
-  -webkit-box-shadow: $x, $y, $blur, $c;
-  -moz-box-shadow: $x, $y, $blur, $c;
-  -ms-box-shadow: $x, $y, $blur, $c;
-  box-shadow: $x, $y, $blur, $c;
-}
-div {
-  @include box-shadow(0px, 0px, 4px, #fff);
-}</code></p>
-<h2 id="if判断指令的使用"><a href="#if判断指令的使用" class="headerlink" title="if判断指令的使用"></a>if判断指令的使用</h2><p><code>@mixin text-effect($val) {
-  @if $val == danger {
-    color: red;
-  }
-  @else if $val == alert {
-    color: yellow;
-  }
-  @else if $val == success {
-    color: green;
-  }
-  @else {
-    color: black;
-  }
-}</code></p>
-<h2 id="for循环指令的使用"><a href="#for循环指令的使用" class="headerlink" title="for循环指令的使用"></a>for循环指令的使用</h2><p><code>&lt;style type=&#39;text/sass&#39;&gt;
-  @for $j from 1 to 6 {
-    .text-#{$j} { font-size: 10px*$j; }
-  }
-&lt;/style&gt;</code></p>
-<h2 id="map遍历指令的使用"><a href="#map遍历指令的使用" class="headerlink" title="map遍历指令的使用"></a>map遍历指令的使用</h2><p>在每次迭代时，变量将从列表或映射分配给当前值。<br><code>@each $color in blue, red, green {
-  .#{$color}-text {color: $color;}
-}</code><br>迭代的语法有不通，也可以这样写<br>`$colors: (color1: blue, color2: red, color3: green);</p>
-<p>@each $key, $color in $colors {<br>  .#{$color}-text {color: $color;}<br>}<br>`</p>
-<h2 id="while循环质量的使用"><a href="#while循环质量的使用" class="headerlink" title="while循环质量的使用"></a>while循环质量的使用</h2><p>@for挑战给出了一个创建简单网格系统的示例。这也适用于@while。<br>首先，定义变量$ x并将其设置为1.接下来，使用@while指令创建网格系统，而$ x小于13。<br><code>$x: 1;
-@while $x &lt; 13 {
-  .col-#{$x} { width: 100%/12 * $x;}
-  $x: $x + 1;
-}</code></p>
+        <h2 id="变量的声明与使用"><a href="#变量的声明与使用" class="headerlink" title="变量的声明与使用"></a>变量的声明与使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$main-fonts: Arial, sans-serif;</span><br><span class="line">$headings-color: green;</span><br><span class="line">//To use variables:</span><br><span class="line">h1 &#123;</span><br><span class="line">  font-family: $main-fonts;</span><br><span class="line">  color: $headings-color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mixins指令的使用"><a href="#mixins指令的使用" class="headerlink" title="mixins指令的使用"></a>mixins指令的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@mixin box-shadow($x, $y, $blur, $c)&#123; </span><br><span class="line">  -webkit-box-shadow: $x, $y, $blur, $c;</span><br><span class="line">  -moz-box-shadow: $x, $y, $blur, $c;</span><br><span class="line">  -ms-box-shadow: $x, $y, $blur, $c;</span><br><span class="line">  box-shadow: $x, $y, $blur, $c;</span><br><span class="line">&#125;</span><br><span class="line">div &#123;</span><br><span class="line">  @include box-shadow(0px, 0px, 4px, #fff);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="if判断指令的使用"><a href="#if判断指令的使用" class="headerlink" title="if判断指令的使用"></a>if判断指令的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@mixin text-effect($val) &#123;</span><br><span class="line">  @if $val == danger &#123;</span><br><span class="line">    color: red;</span><br><span class="line">  &#125;</span><br><span class="line">  @else if $val == alert &#123;</span><br><span class="line">    color: yellow;</span><br><span class="line">  &#125;</span><br><span class="line">  @else if $val == success &#123;</span><br><span class="line">    color: green;</span><br><span class="line">  &#125;</span><br><span class="line">  @else &#123;</span><br><span class="line">    color: black;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for循环指令的使用"><a href="#for循环指令的使用" class="headerlink" title="for循环指令的使用"></a>for循环指令的使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&apos;text/sass&apos;&gt;</span><br><span class="line">  @for $j from 1 to 6 &#123;</span><br><span class="line">    .text-#&#123;$j&#125; &#123; font-size: 10px*$j; &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="map遍历指令的使用"><a href="#map遍历指令的使用" class="headerlink" title="map遍历指令的使用"></a>map遍历指令的使用</h2><p>在每次迭代时，变量将从列表或映射分配给当前值。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@each $color in blue, red, green &#123;</span><br><span class="line">  .#&#123;$color&#125;-text &#123;color: $color;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>迭代的语法有不通，也可以这样写</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$colors: (color1: blue, color2: red, color3: green);</span><br><span class="line"></span><br><span class="line">@each $key, $color in $colors &#123;</span><br><span class="line">  .#&#123;$color&#125;-text &#123;color: $color;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="while循环质量的使用"><a href="#while循环质量的使用" class="headerlink" title="while循环质量的使用"></a>while循环质量的使用</h2><p>@for挑战给出了一个创建简单网格系统的示例。这也适用于@while。<br>首先，定义变量$ x并将其设置为1.接下来，使用@while指令创建网格系统，而$ x小于13。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$x: 1;</span><br><span class="line">@while $x &lt; 13 &#123;</span><br><span class="line">  .col-#&#123;$x&#125; &#123; width: 100%/12 * $x;&#125;</span><br><span class="line">  $x: $x + 1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="引用变量文件-mixins-scss"><a href="#引用变量文件-mixins-scss" class="headerlink" title="引用变量文件_mixins.scss"></a>引用变量文件_mixins.scss</h2><p><code>@import &#39;mixins&#39;</code></p>
-<p>##将一组CSS样式扩展到另一个元素<br>例如，下面的CSS规则块为.panel类设置样式。它有背景颜色，高度和边框。<br><code>.panel{
-  background-color: red;
-  height: 70px;
-  border: 2px solid green;
-}</code><br>现在你想要另一个名为.big-panel的面板。它具有与.panel相同的基本属性，但也需要宽度和字体大小。<br>extend指令是一种重用为一个元素编写的规则的简单方法，然后为另一个元素添加更多：<br><code>.big-panel{
-  @extend .panel;
-  width: 150px;
-  font-size: 2em;
-}</code></p>
+<p>##将一组CSS样式扩展到另一个元素<br>例如，下面的CSS规则块为.panel类设置样式。它有背景颜色，高度和边框。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.panel&#123;</span><br><span class="line">  background-color: red;</span><br><span class="line">  height: 70px;</span><br><span class="line">  border: 2px solid green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>现在你想要另一个名为.big-panel的面板。它具有与.panel相同的基本属性，但也需要宽度和字体大小。<br>extend指令是一种重用为一个元素编写的规则的简单方法，然后为另一个元素添加更多：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  @extend .panel;</span><br><span class="line">  width: 150px;</span><br><span class="line">  font-size: 2em;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -395,6 +356,10 @@ div {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/14/react/" rel="prev" title="react">
+                react <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -458,7 +423,7 @@ div {
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">大大虾</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -471,7 +436,7 @@ div {
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

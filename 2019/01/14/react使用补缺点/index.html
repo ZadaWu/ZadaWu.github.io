@@ -3,7 +3,7 @@
 
 
 
-<html class="theme-next muse" lang="">
+<html class="theme-next muse" lang>
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
+<meta name="description" content="router与component属性结合使用时，如何传参数参考链接 自定义组件  1&amp;lt;Route exact path=&amp;#123;&amp;quot;/&amp;quot;&amp;#125; component=&amp;#123;() =&amp;gt; &amp;lt;Start socket=&amp;#123;socket&amp;#125; addUser=&amp;#123;addUser&amp;#125;/&amp;gt;&amp;#125;/&amp;gt; 这个解决方案">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="V4.0 react使用补缺点">
 <meta property="og:url" content="http://yoursite.com/2019/01/14/react使用补缺点/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
+<meta property="og:description" content="router与component属性结合使用时，如何传参数参考链接 自定义组件  1&amp;lt;Route exact path=&amp;#123;&amp;quot;/&amp;quot;&amp;#125; component=&amp;#123;() =&amp;gt; &amp;lt;Start socket=&amp;#123;socket&amp;#125; addUser=&amp;#123;addUser&amp;#125;/&amp;gt;&amp;#125;/&amp;gt; 这个解决方案">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-14T03:33:10.021Z">
+<meta property="og:updated_time" content="2019-03-13T12:09:15.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="V4.0 react使用补缺点">
-<meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 &amp;lt;Route exact path={&amp;quot;/&amp;quot;} component={() =&amp;gt; &amp;lt;Start socket={socket} addUser={addUser}/&amp;gt;}/&amp;gt; 这个解决方案是相当于自定义组件 类似的： &amp;lt;Route path=&amp;quot;/abc&amp;quot; r">
+<meta name="twitter:description" content="router与component属性结合使用时，如何传参数参考链接 自定义组件  1&amp;lt;Route exact path=&amp;#123;&amp;quot;/&amp;quot;&amp;#125; component=&amp;#123;() =&amp;gt; &amp;lt;Start socket=&amp;#123;socket&amp;#125; addUser=&amp;#123;addUser&amp;#125;/&amp;gt;&amp;#125;/&amp;gt; 这个解决方案">
 
 
 
@@ -136,7 +136,7 @@
 
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
   
   
@@ -146,7 +146,7 @@
   <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
-    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
   <div class="site-meta ">
     
@@ -236,20 +236,20 @@
   
   
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
   
   
   
   <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/14/react使用补缺点/">
 
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content>
       <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="Hexo">
     </span>
 
@@ -309,12 +309,14 @@
 
       
         <h2 id="router与component属性结合使用时，如何传参数参考链接"><a href="#router与component属性结合使用时，如何传参数参考链接" class="headerlink" title="router与component属性结合使用时，如何传参数参考链接"></a>router与component属性结合使用时，如何传参数<a href="https://github.com/ReactTraining/react-router/issues/4105" target="_blank" rel="noopener">参考链接</a></h2><ol>
-<li><p><code>&lt;Route exact path={&quot;/&quot;} component={() =&gt; &lt;Start socket={socket} addUser={addUser}/&gt;}/&gt;</code><br> 这个解决方案是相当于自定义组件<br> 类似的：<br> <code>&lt;Route path=&quot;/abc&quot; render={()=&gt;&lt;TestWidget num=&quot;2&quot; someProp={100}/&gt;}/&gt;</code></p>
-</li>
-<li><p><code>&lt;Route exact path=&quot;/abc&quot; render={props =&gt; &lt;TestWidget someProp=&quot;2&quot; {...props} /&gt;} /&gt;</code></p>
-</li>
+<li>自定义组件</li>
 </ol>
-<p>and what I do is I actually spread {…props.match.params} because then on TestWidget you can access the URL parameters with just this.props.urlVariableHere.<br>这个解决方案是站在组件中获取路由的参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route exact path=&#123;&quot;/&quot;&#125; component=&#123;() =&gt; &lt;Start socket=&#123;socket&#125; addUser=&#123;addUser&#125;/&gt;&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<p>这个解决方案是相当于、<br>类似的： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route path=&quot;/abc&quot; render=&#123;()=&gt;&lt;TestWidget num=&quot;2&quot; someProp=&#123;100&#125;/&gt;&#125;/&gt;</span><br></pre></td></tr></table></figure>
+<p>2.在组件中获取路由的参数 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;Route exact path=&quot;/abc&quot; render=&#123;props =&gt; &lt;TestWidget someProp=&quot;2&quot; &#123;...props&#125; /&gt;&#125; /&gt;</span><br></pre></td></tr></table></figure>
+<p>and what I do is I actually spread {…props.match.params} because then on TestWidget you can access the URL parameters with just this.props.urlVariableHere.<br>这个解决方案是在组件中获取路由的参数</p>
 <h2 id="如何复用组件参考链接"><a href="#如何复用组件参考链接" class="headerlink" title="如何复用组件参考链接"></a>如何复用组件<a href="https://react-cn.github.io/react/docs/reusable-components.html" target="_blank" rel="noopener">参考链接</a></h2><p>组件是 React 里复用代码最佳方式，但是有时一些复杂的组件间也需要共用一些功能。有时会被称为 跨切面关注点。React 使用 mixins 来解决这类问题。<br>但是 mixins 在ES6 的情况下不支持</p>
 <h2 id="如何操作dom-参考链接"><a href="#如何操作dom-参考链接" class="headerlink" title="如何操作dom 参考链接"></a>如何操作dom <a href="https://react.docschina.org/docs/refs-and-the-dom.html" target="_blank" rel="noopener">参考链接</a></h2><p>方法一：使用ref来访问组件<br>步骤：</p>
 <ol>
@@ -323,21 +325,14 @@
 </ol>
 <p>方法二： 在函数式组间内部使用ref,使之指向一个DOM元素活着class组件：</p>
 <ol>
-<li><input type="text" ref="{(input)" ==""> { textInput = input; }} /&gt;</li>
+<li><input type="text" ref="{(input)" => { textInput = input; }} /&gt;</li>
 </ol>
-<h2 id="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"><a href="#具体属性改变时，采取重新渲染，使用shouldComponentUpdate" class="headerlink" title="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"></a>具体属性改变时，采取重新渲染，使用shouldComponentUpdate</h2><p><code>shouldComponentUpdate(nextProps, nextState) {
-    if (this.props.color !== nextProps.color) {
-      return true;
-    }
-    if (this.state.count !== nextState.count) {
-      return true;
-    }
-    return false;
-}</code></p>
-<h2 id="安装ionic"><a href="#安装ionic" class="headerlink" title="安装ionic"></a>安装ionic</h2><p>npx cap add  ios<br>npx cap open ios<br>打开运行报错 error: /Users/zhangmingwu/Downloads/work/react-mikegolf/ios/App/Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig: unable to open file (in target “App” in project “App”) (in target ‘App’)</p>
+<h2 id="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"><a href="#具体属性改变时，采取重新渲染，使用shouldComponentUpdate" class="headerlink" title="具体属性改变时，采取重新渲染，使用shouldComponentUpdate"></a>具体属性改变时，采取重新渲染，使用shouldComponentUpdate</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">shouldComponentUpdate(nextProps, nextState) &#123;</span><br><span class="line">    if (this.props.color !== nextProps.color) &#123;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    if (this.state.count !== nextState.count) &#123;</span><br><span class="line">      return true;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="安装ionic"><a href="#安装ionic" class="headerlink" title="安装ionic"></a>安装ionic</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npx cap add  ios</span><br><span class="line">npx cap open ios</span><br></pre></td></tr></table></figure>
+<p>打开运行报错 error: /Users/zhangmingwu/Downloads/work/react-mikegolf/ios/App/Pods/Target Support Files/Pods-App/Pods-App.debug.xcconfig: unable to open file (in target “App” in project “App”) (in target ‘App’)</p>
 <p>解决方案: <a href="https://www.jianshu.com/p/b2f391ba0287" target="_blank" rel="noopener">https://www.jianshu.com/p/b2f391ba0287</a></p>
-<p>npx cap sync </p>
-
+<pre><code>npx cap sync
+</code></pre>
       
     </div>
     
@@ -437,7 +432,7 @@
 
       <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">大大虾</p>
               <p class="site-description motion-element" itemprop="description"></p>
@@ -450,7 +445,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
