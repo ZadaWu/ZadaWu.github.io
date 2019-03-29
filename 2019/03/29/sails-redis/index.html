@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
+<meta name="description" content="之所以这两个一起写，是因为项目中有用到，而我也是新手接触，因此做一个简单的记录。你可以参考我的git项目sails-test 参考文档1-2视频3-4视频 sails 入门地址  1234npm install sails -gsails new test-projectcd test-projectsails lift（会有提示，1. FOR DEV:alter）  新建一个restful的AP">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react vs angularjs vs vue">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/index.html">
+<meta property="og:title" content="sails + redis">
+<meta property="og:url" content="http://yoursite.com/2019/03/29/sails-redis/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
+<meta property="og:description" content="之所以这两个一起写，是因为项目中有用到，而我也是新手接触，因此做一个简单的记录。你可以参考我的git项目sails-test 参考文档1-2视频3-4视频 sails 入门地址  1234npm install sails -gsails new test-projectcd test-projectsails lift（会有提示，1. FOR DEV:alter）  新建一个restful的AP">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-03-29T10:21:54.525Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react vs angularjs vs vue">
-<meta name="twitter:description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
+<meta name="twitter:title" content="sails + redis">
+<meta name="twitter:description" content="之所以这两个一起写，是因为项目中有用到，而我也是新手接触，因此做一个简单的记录。你可以参考我的git项目sails-test 参考文档1-2视频3-4视频 sails 入门地址  1234npm install sails -gsails new test-projectcd test-projectsails lift（会有提示，1. FOR DEV:alter）  新建一个restful的AP">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/29/sails-redis/">
 
 
 
 
 
-  <title>react vs angularjs vs vue | Hexo</title>
+  <title>sails + redis | Hexo</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/29/sails-redis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react vs angularjs vs vue</h1>
+          <h1 class="post-title" itemprop="name headline">sails + redis</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T14:56:28+08:00">
-                2019-02-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-29T14:59:27+08:00">
+                2019-03-29
               </time>
             
 
@@ -308,9 +308,38 @@
       
 
       
-        <p>1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向）</p>
-<p>2.大小和性能<br>Angular非常臃肿，React和vue都有虚拟DOM，可以提高性能。</p>
-<p>3.vue<a href="https://www.kancloud.cn/dataoedu/vue/327304" target="_blank" rel="noopener">参考链接</a></p>
+        <p>之所以这两个一起写，是因为项目中有用到，而我也是新手接触，因此做一个简单的记录。<br>你可以参考我的git项目<a href="https://github.com/ZadaWu/sails-test" target="_blank" rel="noopener">sails-test</a></p>
+<p><a href="https://sailsjs.com/documentation/concepts/actions-and-controllers" target="_blank" rel="noopener">参考文档</a><br><a href="https://www.youtube.com/watch?v=AmjiDC_JUt4" target="_blank" rel="noopener">1-2视频</a><br><a href="https://www.youtube.com/watch?v=qAQWBfnO6n0" target="_blank" rel="noopener">3-4视频</a></p>
+<h2 id="sails"><a href="#sails" class="headerlink" title="sails"></a>sails</h2><ol>
+<li><a href="https://sailsjs.com/get-started" target="_blank" rel="noopener">入门地址</a></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install sails -g</span><br><span class="line">sails new test-project</span><br><span class="line">cd test-project</span><br><span class="line">sails lift（会有提示，1. FOR DEV:alter）</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li>新建一个restful的API</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sails genenrate api hello</span><br></pre></td></tr></table></figure>
+<p>至此，你目前可以在磁盘缓存数据的基础上调用hello这个api接口<br>新增用户=&gt;PUSH <a href="http://localhost:1337/hello/Create?userId=13&amp;userName=san" target="_blank" rel="noopener">http://localhost:1337/hello/Create?userId=13&amp;userName=san</a><br>修改用户=&gt;PATCH <a href="http://localhost:1337/hello/1?userId=11&amp;userName=wu" target="_blank" rel="noopener">http://localhost:1337/hello/1?userId=11&amp;userName=wu</a><br>删除用户=&gt;DEL <a href="http://localhost:1337/hello?id=1" target="_blank" rel="noopener">http://localhost:1337/hello?id=1</a> (id为创建后返回的id)<br>查找所有用户=&gt;GET <a href="http://localhost:1337/hello" target="_blank" rel="noopener">http://localhost:1337/hello</a><br>通过主键查找一个用户=&gt;GET <a href="http://localhost:1337/hello/1" target="_blank" rel="noopener">http://localhost:1337/hello/1</a></p>
+<ol start="3">
+<li><p>使用mongoDB存储</p>
+<ul>
+<li>首先你需要安装一个mongoDB,这里我自己创建了一个数据库 hello</li>
+<li>安装 sails-mysql : npm install -g sails-mysql</li>
+<li><p>修改models/Hello.js 配置你的表以及字段的属性</p>
+   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line"></span><br><span class="line">  tableName: &apos;hello&apos;,</span><br><span class="line">  primaryKey: &apos;id&apos;,</span><br><span class="line"></span><br><span class="line">  attributes: &#123;</span><br><span class="line">    userId: &#123;</span><br><span class="line">      type: &apos;string&apos;,</span><br><span class="line">      required: true,</span><br><span class="line">      unique: true,</span><br><span class="line">      columnName: &apos;user_id&apos;,</span><br><span class="line">    &#125;,</span><br><span class="line">    userName: &#123;</span><br><span class="line">      type: &apos;string&apos;,</span><br><span class="line">      columnName: &apos;user_name&apos;,</span><br><span class="line">      defaultsTo: &apos;&apos;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  async beforeCreate(data, next) &#123;</span><br><span class="line">    return await next()</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  async afterCreate(data, next) &#123;</span><br><span class="line">    return await next()</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<pre><code>* config中的datastores.js里面配置mysql的用户名/密码/IP/端口号/数据库
+
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">module.exports.datastores = &#123;</span><br><span class="line">  default: &#123;</span><br><span class="line">    adapter: &apos;sails-mysql&apos;,</span><br><span class="line">    url: &apos;mysql://root:password@localhost:3306/hello&apos;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</code></pre><ol start="4">
+<li>至此，你可以重启项目，调用你的接口，数据库里面就能看到了</li>
+</ol>
+<p>ps： 你可以全局安装nodeman, nodeman app.js 能帮你监控app.js是否改动，改动则更新配置</p>
+<h2 id="redis"><a href="#redis" class="headerlink" title="redis"></a>redis</h2><ol>
+<li><a href="http://redis.js.org/" target="_blank" rel="noopener">nodejs使用redis文档</a></li>
+</ol>
 
       
     </div>
@@ -335,8 +364,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/14/react/" rel="next" title="react">
-                <i class="fa fa-chevron-left"></i> react
+              <a href="/2019/03/26/mysql/" rel="next" title="mysql">
+                <i class="fa fa-chevron-left"></i> mysql
               </a>
             
           </div>
@@ -344,10 +373,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/01/前端工程思想/" rel="prev" title="前端工程思想">
-                前端工程思想 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -399,8 +424,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -451,6 +485,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#sails"><span class="nav-number">1.</span> <span class="nav-text">sails</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis"><span class="nav-number">2.</span> <span class="nav-text">redis</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
