@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="总结,">
+  <meta name="keywords" content="编程思维,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="这一年，我觉得工作上有几件事情是让我得到自我肯定和继续前进的勇气的：  作战室从去年年底原型定下来到完成，作为其中一人，从0到1参与其中，虽然产品总有用的不爽的地方，但室某种程度上解决了公司各层的需求，这也是基本半年没有开发新功能后还有人用的原因； 作战室小程序的完成。这是子曰哥要离职那一会做的，应该算是自己独立完成的第一个产品。做完后，公司也是有人使用，解决了运营数据及时查看的这个需求； 我改变">
-<meta name="keywords" content="总结">
+<meta name="description" content="有关重构与模式模式与重构之间存在着天然联系。模式时你想到达的目的地，而重构则是从其他地方抵达这个目的地的条条道路。将模式放到重构的背景中领会，而不是仅仅将模式视为与重构无关的可服用的要素。 重构的动机 使新代码的增加更加容易 改善既有代码的设计 对代码理解更透彻 提高编程趣味性  重构需要的工作方法测试驱动开发（TDD）和持续重构这是极限编程诸多优秀实践中的两个。通过TDD和持续重构，我们将变成变">
+<meta name="keywords" content="编程思维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2018年终总结">
-<meta property="og:url" content="http://yoursite.com/2018/12/25/2018年终总结/index.html">
+<meta property="og:title" content="重构与模式-读书笔记">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/重构与模式-读书笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="这一年，我觉得工作上有几件事情是让我得到自我肯定和继续前进的勇气的：  作战室从去年年底原型定下来到完成，作为其中一人，从0到1参与其中，虽然产品总有用的不爽的地方，但室某种程度上解决了公司各层的需求，这也是基本半年没有开发新功能后还有人用的原因； 作战室小程序的完成。这是子曰哥要离职那一会做的，应该算是自己独立完成的第一个产品。做完后，公司也是有人使用，解决了运营数据及时查看的这个需求； 我改变">
+<meta property="og:description" content="有关重构与模式模式与重构之间存在着天然联系。模式时你想到达的目的地，而重构则是从其他地方抵达这个目的地的条条道路。将模式放到重构的背景中领会，而不是仅仅将模式视为与重构无关的可服用的要素。 重构的动机 使新代码的增加更加容易 改善既有代码的设计 对代码理解更透彻 提高编程趣味性  重构需要的工作方法测试驱动开发（TDD）和持续重构这是极限编程诸多优秀实践中的两个。通过TDD和持续重构，我们将变成变">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-04-04T02:45:00.123Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2018年终总结">
-<meta name="twitter:description" content="这一年，我觉得工作上有几件事情是让我得到自我肯定和继续前进的勇气的：  作战室从去年年底原型定下来到完成，作为其中一人，从0到1参与其中，虽然产品总有用的不爽的地方，但室某种程度上解决了公司各层的需求，这也是基本半年没有开发新功能后还有人用的原因； 作战室小程序的完成。这是子曰哥要离职那一会做的，应该算是自己独立完成的第一个产品。做完后，公司也是有人使用，解决了运营数据及时查看的这个需求； 我改变">
+<meta name="twitter:title" content="重构与模式-读书笔记">
+<meta name="twitter:description" content="有关重构与模式模式与重构之间存在着天然联系。模式时你想到达的目的地，而重构则是从其他地方抵达这个目的地的条条道路。将模式放到重构的背景中领会，而不是仅仅将模式视为与重构无关的可服用的要素。 重构的动机 使新代码的增加更加容易 改善既有代码的设计 对代码理解更透彻 提高编程趣味性  重构需要的工作方法测试驱动开发（TDD）和持续重构这是极限编程诸多优秀实践中的两个。通过TDD和持续重构，我们将变成变">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/25/2018年终总结/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/04/重构与模式-读书笔记/">
 
 
 
 
 
-  <title>2018年终总结 | Hexo</title>
+  <title>重构与模式-读书笔记 | Hexo</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/25/2018年终总结/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/重构与模式-读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2018年终总结</h1>
+          <h1 class="post-title" itemprop="name headline">重构与模式-读书笔记</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-25T17:25:16+08:00">
-                2018-12-25
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T09:08:05+08:00">
+                2019-04-04
               </time>
             
 
@@ -308,30 +308,38 @@
       
 
       
-        <p>这一年，我觉得工作上有几件事情是让我得到自我肯定和继续前进的勇气的：</p>
-<ol>
-<li>作战室从去年年底原型定下来到完成，作为其中一人，从0到1参与其中，虽然产品总有用的不爽的地方，但室某种程度上解决了公司各层的需求，这也是基本半年没有开发新功能后还有人用的原因；</li>
-<li>作战室小程序的完成。这是子曰哥要离职那一会做的，应该算是自己独立完成的第一个产品。做完后，公司也是有人使用，解决了运营数据及时查看的这个需求；</li>
-<li>我改变自己局限于前端工程师这个舒适区的这种心态，在8月份来到这里后，尝试用python去爬虫，尽量让自己的资源最大化发挥，从而促使团队转起来更快；</li>
+        <h2 id="有关重构与模式"><a href="#有关重构与模式" class="headerlink" title="有关重构与模式"></a>有关重构与模式</h2><p>模式与重构之间存在着天然联系。模式时你想到达的目的地，而重构则是从其他地方抵达这个目的地的条条道路。<br>将模式放到重构的背景中领会，而不是仅仅将模式视为与重构无关的可服用的要素。</p>
+<h3 id="重构的动机"><a href="#重构的动机" class="headerlink" title="重构的动机"></a>重构的动机</h3><ol>
+<li>使新代码的增加更加容易</li>
+<li>改善既有代码的设计</li>
+<li>对代码理解更透彻</li>
+<li>提高编程趣味性</li>
 </ol>
-<p>但是，工作中，其实我是存在一些问题的，后面是要自己去改进的：</p>
+<h3 id="重构需要的工作方法测试驱动开发（TDD）和持续重构"><a href="#重构需要的工作方法测试驱动开发（TDD）和持续重构" class="headerlink" title="重构需要的工作方法测试驱动开发（TDD）和持续重构"></a>重构需要的工作方法测试驱动开发（TDD）和持续重构</h3><p>这是极限编程诸多优秀实践中的两个。通过TDD和持续重构，我们将变成变成一种对话，从而高效的使可以工作的代码不断演进。测试驱动开发和持续重构提供了一种精益，迭代和训练有素的变成风格，能够最大程度地有张有驰，提高生产率。</p>
 <ol>
-<li>沟通不顺畅，这主要表现与我没能把自己置于对方角色去思考问题，在改变（在沟通中，刻意让自己先别说话，去想别人真正的需求是什么，如果是我，我会怎么样做）中，毕竟团队成员的沟通顺畅和沟通到位才能让团队工作完成的准确和迅速。新的一年，我想我会让自己的沟通变得有效和顺畅。</li>
-<li>我还是不能从全局的角度去思考一个产品应该如何去下一步发展，都说产品都是天下一大抄，但是我还没有体验足够的产品，没有自己丰富的感受，新的一年，希望能坚持用新APP，培养自己的想法。</li>
-<li>对于自己技术陌生的任务，还是会存在估时过多的情况，这从侧面说明我的技术适应力不够，新的一年，使用积累新技术，并且将新技术能应用于团队产品上。</li>
-<li>我对于做计划管理这些事情还是很排斥，但是我没有去足够的思考，但是我觉得计划管理这些技能在将来中时必不可少的，新的一年，我要多去学学管理的知识，不说管理团队，先管理好自己，让自己更加优秀。</li>
-<li>我的职业名称是：数据可视化工程师，然后我看了下网络上对这个职位的一些要求，其实我偏向前端工程师，我希望自己能做到这个职位的要求，能理解数据，能用可视化讲故事等等</li>
+<li>问： 编写一个测试，向系统提问</li>
+<li>答： 编写代码通过这个测试，回答这个提问</li>
+<li>提炼： 通过合并概念，去芜存菁，消除奇艺，提炼回答</li>
+<li>反复： 提出下一个问题，继续进行对话<br>而这样的行为有助于：</li>
+<li>保持较低的缺陷数量</li>
+<li>大胆地进行重构</li>
+<li>得到更简单，更优秀的代码</li>
+<li>编程时没有压力</li>
 </ol>
-<p>又过去一年了，这一年我一直在想，我想成为什么样的人，以什么为动力继续着职业生涯。这样的思考应该是源于我内心的恐惧，我担心会被市场淘汰。<br>所以我要成为：</p>
+<p>###测试驱动的重构<br>测试驱动的重构（test-driven refactoring）包括应用测试驱动开发得到替换代码，然后将老代码替换为新代码（同时保留并重新运行老代码的测试）。<br>替换算法重构时最适合测试驱动重构方法哎实现重构的绝佳例子。它实际上时彻底地将原油算法替换成另一个更简单清晰的算法。如果去完成呢？先编写新算法=》替换老算法=》测试通过=&gt;调试</p>
+<h3 id="低层次重构"><a href="#低层次重构" class="headerlink" title="低层次重构"></a>低层次重构</h3><p>低层次重构所需要完成的许多工作都设计代码的搬移</p>
 <ol>
-<li>专业的人，在我的工作区域中，我能提出几种解决方案并且做方案对比；不在我的工作区域中，我能有所涉猎，同事沟通的时候不要一脸懵逼，无法提供建议之类的。</li>
-<li>能思考，在工作或者日常生活中，都能去想是什么，怎么做，为什么，怎么样更好</li>
-<li>有好奇心的人，对于新事物新技术，我希望能放下恐惧，去尝试，去成长</li>
-<li>能坚持的人，以上我想改变自己的地方，我希望我能坚持下去。</li>
-<li>勇敢的人，在团队需要的时候，前提有能力的情况下，勇敢的承担一些团队需要有人去做的事情。</li>
-<li>有钱的人，我觉得如果我做到以上五点，我离有钱就不远了，不论以后做的是什么。</li>
+<li>提炼函数重构 需要将代码搬移到一个新函数中</li>
+<li>函数上移重构 需要将方法从子类搬移到超类</li>
+<li>提炼类重构 需要将代码搬移到心累中</li>
+<li>搬移函数重构 需要将函数从一个类搬移到另外一个类</li>
+<li>替换算法重构 需要将写新方法代替老方法</li>
+<li></li>
 </ol>
-<p>共勉，我希望成为更好的自己。 :)</p>
+<h3 id="一些模版方法的意图"><a href="#一些模版方法的意图" class="headerlink" title="一些模版方法的意图"></a>一些模版方法的意图</h3><ol>
+<li>Template Method(模版方法)的意图<br>定义一个操作中算法的骨架，而将一些步骤延迟到子类中。它使得之类在不改变算法结构的情况下，重定义该算法的某些特定步骤。而它的功能其实有助于减少或者去掉类层次中各个子类中相识方法中的重复代码。</li>
+<li>State（状态）的意图<br>允许一个对象在其内部状态改变时改变自己的行为。对象看起来似乎修改了自己的类。而它的功能其实有助于简化复杂的有条件的状态改变逻辑</li>
+</ol>
 
       
     </div>
@@ -349,7 +357,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/总结/" rel="tag"># 总结</a>
+            <a href="/tags/编程思维/" rel="tag"># 编程思维</a>
           
         </div>
       
@@ -362,8 +370,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/python-日期处理/" rel="next" title="python 日期处理">
-                <i class="fa fa-chevron-left"></i> python 日期处理
+              <a href="/2019/04/02/生活随感/" rel="next" title="生活随感">
+                <i class="fa fa-chevron-left"></i> 生活随感
               </a>
             
           </div>
@@ -372,8 +380,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/14/react使用补缺点/" rel="prev" title="V4.0 react使用补缺点">
-                V4.0 react使用补缺点 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/04/04/UML-笔记/" rel="prev" title="UML-笔记">
+                UML-笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -426,8 +434,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -478,6 +495,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#有关重构与模式"><span class="nav-number">1.</span> <span class="nav-text">有关重构与模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#重构的动机"><span class="nav-number">1.1.</span> <span class="nav-text">重构的动机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构需要的工作方法测试驱动开发（TDD）和持续重构"><span class="nav-number">1.2.</span> <span class="nav-text">重构需要的工作方法测试驱动开发（TDD）和持续重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#低层次重构"><span class="nav-number">1.3.</span> <span class="nav-text">低层次重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#一些模版方法的意图"><span class="nav-number">1.4.</span> <span class="nav-text">一些模版方法的意图</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

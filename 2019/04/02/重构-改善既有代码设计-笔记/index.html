@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="编程思维,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。 重构关健词 提炼函数（106） 改变函数声明（124） 搬移函数（198） 函数参数化（310）  如">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。程的帽子，我们会说，这个重构过程创造了一组部分应用函数（partially applied functi">
+<meta name="keywords" content="编程思维">
 <meta property="og:type" content="article">
 <meta property="og:title" content="重构-改善既有代码设计-笔记">
 <meta property="og:url" content="http://yoursite.com/2019/04/02/重构-改善既有代码设计-笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。 重构关健词 提炼函数（106） 改变函数声明（124） 搬移函数（198） 函数参数化（310）  如">
+<meta property="og:description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。程的帽子，我们会说，这个重构过程创造了一组部分应用函数（partially applied functi">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-02T10:39:41.086Z">
+<meta property="og:updated_time" content="2019-04-04T02:45:00.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重构-改善既有代码设计-笔记">
-<meta name="twitter:description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。 重构关健词 提炼函数（106） 改变函数声明（124） 搬移函数（198） 函数参数化（310）  如">
+<meta name="twitter:description" content="概念重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。程的帽子，我们会说，这个重构过程创造了一组部分应用函数（partially applied functi">
 
 
 
@@ -308,17 +308,21 @@
       
 
       
-        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。</p>
-<h2 id="重构关健词"><a href="#重构关健词" class="headerlink" title="重构关健词"></a>重构关健词</h2><ol>
-<li>提炼函数（106）</li>
-<li>改变函数声明（124）</li>
-<li>搬移函数（198）</li>
-<li>函数参数化（310）</li>
-</ol>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>重构与性能优化有很多相似之处：两者都需要修改代码，并且两者都不会改变程序的整体功能。两者的差别在于其目的：重构是为了让代码“更容易理解，更易于修改”。这可能使程序运行得更快，也可能使程序运行得更慢。在性能优化时，我只关心让程序运行得更快，最终得到的代码有可能更难理解和维护，对此我有心理准备。<br>程的帽子，我们会说，这个重构过程创造了一组部分应用函数（partially applied function）。</p>
 <h2 id="如何将重构带入自己的工作，遵守一下三次准则"><a href="#如何将重构带入自己的工作，遵守一下三次准则" class="headerlink" title="如何将重构带入自己的工作，遵守一下三次准则"></a>如何将重构带入自己的工作，遵守一下三次准则</h2><ol>
 <li>第一次做某件事时只管去做</li>
 <li>第二次做类似的事会产生反感，但无论如何还是可以去做</li>
 <li>第三次再做类似的事，你就应该重构</li>
+</ol>
+<h3 id="需要做一些处理的地方"><a href="#需要做一些处理的地方" class="headerlink" title="需要做一些处理的地方"></a>需要做一些处理的地方</h3><ol>
+<li>变量命名不合理的地方</li>
+<li>代码重复的地方</li>
+<li>过长函数的地方-封装成多个子函数调用</li>
+<li>过长参数列表的地方</li>
+<li>全局数据-防止被修改</li>
+<li>可变数据：如果要更新一个数据结构，就返回一份新的数据副本，旧的数据仍保持不变</li>
+<li>发散式变化：一旦需要修改，我们希望能够跳到系统的某一点，只在该处做修改。如果不能做到这一点，你就嗅出两种紧密相关的刺鼻味道中的一种了。</li>
+<li>霰弹式修改：如果每遇到某种变化，你都必须在许多不同的类内做出许多小修改，你所面临的坏味道就是霰弹式修改。如果需要修改的代码散布四处，你不但很难找到它们，也很容易错过某个重要的修改。</li>
 </ol>
 <h2 id="一些疑问"><a href="#一些疑问" class="headerlink" title="一些疑问"></a>一些疑问</h2><h3 id="什么时候做重构最合适"><a href="#什么时候做重构最合适" class="headerlink" title="什么时候做重构最合适"></a>什么时候做重构最合适</h3><p>预备性重构：在编码前做合适做重构，去看现有代码是否提供类似功能的函数</p>
 <h3 id="帮助理解的重构"><a href="#帮助理解的重构" class="headerlink" title="帮助理解的重构"></a>帮助理解的重构</h3><p>先理解这段代码在干嘛，然后再去重构，使代码更易懂</p>
@@ -338,6 +342,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/编程思维/" rel="tag"># 编程思维</a>
+          
+        </div>
       
 
       
@@ -437,7 +447,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -450,7 +460,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -483,7 +493,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重构关健词"><span class="nav-number">2.</span> <span class="nav-text">重构关健词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何将重构带入自己的工作，遵守一下三次准则"><span class="nav-number">3.</span> <span class="nav-text">如何将重构带入自己的工作，遵守一下三次准则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些疑问"><span class="nav-number">4.</span> <span class="nav-text">一些疑问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候做重构最合适"><span class="nav-number">4.1.</span> <span class="nav-text">什么时候做重构最合适</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#帮助理解的重构"><span class="nav-number">4.2.</span> <span class="nav-text">帮助理解的重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捡垃圾式重构"><span class="nav-number">4.3.</span> <span class="nav-text">捡垃圾式重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何抽取一个公共库"><span class="nav-number">4.4.</span> <span class="nav-text">如何抽取一个公共库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何将重构带入自己的工作，遵守一下三次准则"><span class="nav-number">2.</span> <span class="nav-text">如何将重构带入自己的工作，遵守一下三次准则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#需要做一些处理的地方"><span class="nav-number">2.1.</span> <span class="nav-text">需要做一些处理的地方</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些疑问"><span class="nav-number">3.</span> <span class="nav-text">一些疑问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么时候做重构最合适"><span class="nav-number">3.1.</span> <span class="nav-text">什么时候做重构最合适</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#帮助理解的重构"><span class="nav-number">3.2.</span> <span class="nav-text">帮助理解的重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#捡垃圾式重构"><span class="nav-number">3.3.</span> <span class="nav-text">捡垃圾式重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何抽取一个公共库"><span class="nav-number">3.4.</span> <span class="nav-text">如何抽取一个公共库</span></a></li></ol></li></ol></div>
             
 
           </div>
