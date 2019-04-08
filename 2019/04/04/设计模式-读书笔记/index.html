@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="前端,">
+  <meta name="keywords" content="编程思维,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
-<meta name="keywords" content="前端">
+<meta name="description" content="为了能很好的了解设计模式与重构的结合，因此我复习了一下设计模式，建议同学直接点击查看这个链接 创建型模式简单工厂模式工厂方法模式抽象工厂模式建造者模式原型模式单例模式结构型模式适配器模式桥接模式装饰模式外观模式享元模式代理模式行为型模式命令模式中介者模式观察者模式状态模式策略模式">
+<meta name="keywords" content="编程思维">
 <meta property="og:type" content="article">
-<meta property="og:title" content="react vs angularjs vs vue">
-<meta property="og:url" content="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/index.html">
+<meta property="og:title" content="设计模式-读书笔记">
+<meta property="og:url" content="http://yoursite.com/2019/04/04/设计模式-读书笔记/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
+<meta property="og:description" content="为了能很好的了解设计模式与重构的结合，因此我复习了一下设计模式，建议同学直接点击查看这个链接 创建型模式简单工厂模式工厂方法模式抽象工厂模式建造者模式原型模式单例模式结构型模式适配器模式桥接模式装饰模式外观模式享元模式代理模式行为型模式命令模式中介者模式观察者模式状态模式策略模式">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-04-08T08:09:04.147Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="react vs angularjs vs vue">
-<meta name="twitter:description" content="1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向） 2.大小和性能Angular非常臃肿，React和vue都">
+<meta name="twitter:title" content="设计模式-读书笔记">
+<meta name="twitter:description" content="为了能很好的了解设计模式与重构的结合，因此我复习了一下设计模式，建议同学直接点击查看这个链接 创建型模式简单工厂模式工厂方法模式抽象工厂模式建造者模式原型模式单例模式结构型模式适配器模式桥接模式装饰模式外观模式享元模式代理模式行为型模式命令模式中介者模式观察者模式状态模式策略模式">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/">
+  <link rel="canonical" href="http://yoursite.com/2019/04/04/设计模式-读书笔记/">
 
 
 
 
 
-  <title>react vs angularjs vs vue | Hexo</title>
+  <title>设计模式-读书笔记 | Hexo</title>
   
 
 
@@ -241,7 +241,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/18/react-vs-angularjs-vs-vue/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/04/04/设计模式-读书笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -258,7 +258,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">react vs angularjs vs vue</h1>
+          <h1 class="post-title" itemprop="name headline">设计模式-读书笔记</h1>
         
 
         <div class="post-meta">
@@ -270,8 +270,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-18T14:56:28+08:00">
-                2019-02-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-04T17:56:43+08:00">
+                2019-04-04
               </time>
             
 
@@ -308,10 +308,8 @@
       
 
       
-        <p>1.react与angular之间的最大差异是单向与双向绑定。单UI元素（例如，用户输入）被更新时，Angular的双向绑定改变模型状态。react只有一种方式： 先更新模型，然后呈现UI元素。Angular的方法在代码中更为干净；react的方式可以获得更好的数据概率，因为数据只向一个方向流动；vue支持单向绑定和双向绑定（默认为单向）</p>
-<p>2.大小和性能<br>Angular非常臃肿，React和vue都有虚拟DOM，可以提高性能。</p>
-<p>3.vue<a href="https://www.kancloud.cn/dataoedu/vue/327304" target="_blank" rel="noopener">参考链接</a></p>
-
+        <p>为了能很好的了解设计模式与重构的结合，因此我复习了一下设计模式，建议同学直接点击查看<a href="https://design-patterns.readthedocs.io/zh_CN/latest/creational_patterns/creational.html" target="_blank" rel="noopener">这个链接</a></p>
+<h2 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h2><h3 id="简单工厂模式"><a href="#简单工厂模式" class="headerlink" title="简单工厂模式"></a>简单工厂模式</h3><h3 id="工厂方法模式"><a href="#工厂方法模式" class="headerlink" title="工厂方法模式"></a>工厂方法模式</h3><h3 id="抽象工厂模式"><a href="#抽象工厂模式" class="headerlink" title="抽象工厂模式"></a>抽象工厂模式</h3><h3 id="建造者模式"><a href="#建造者模式" class="headerlink" title="建造者模式"></a>建造者模式</h3><h3 id="原型模式"><a href="#原型模式" class="headerlink" title="原型模式"></a>原型模式</h3><h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><h2 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h2><h3 id="适配器模式"><a href="#适配器模式" class="headerlink" title="适配器模式"></a>适配器模式</h3><h3 id="桥接模式"><a href="#桥接模式" class="headerlink" title="桥接模式"></a>桥接模式</h3><h3 id="装饰模式"><a href="#装饰模式" class="headerlink" title="装饰模式"></a>装饰模式</h3><h3 id="外观模式"><a href="#外观模式" class="headerlink" title="外观模式"></a>外观模式</h3><h3 id="享元模式"><a href="#享元模式" class="headerlink" title="享元模式"></a>享元模式</h3><h3 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h3><h2 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h2><h3 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h3><h3 id="中介者模式"><a href="#中介者模式" class="headerlink" title="中介者模式"></a>中介者模式</h3><h3 id="观察者模式"><a href="#观察者模式" class="headerlink" title="观察者模式"></a>观察者模式</h3><h3 id="状态模式"><a href="#状态模式" class="headerlink" title="状态模式"></a>状态模式</h3><h3 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h3>
       
     </div>
     
@@ -328,7 +326,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/前端/" rel="tag"># 前端</a>
+            <a href="/tags/编程思维/" rel="tag"># 编程思维</a>
           
         </div>
       
@@ -341,8 +339,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/14/react/" rel="next" title="react">
-                <i class="fa fa-chevron-left"></i> react
+              <a href="/2019/04/04/UML-笔记/" rel="next" title="UML-笔记">
+                <i class="fa fa-chevron-left"></i> UML-笔记
               </a>
             
           </div>
@@ -350,10 +348,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/01/前端工程思想/" rel="prev" title="前端工程思想">
-                前端工程思想 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -405,8 +399,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -457,6 +460,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建型模式"><span class="nav-number">1.</span> <span class="nav-text">创建型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简单工厂模式"><span class="nav-number">1.1.</span> <span class="nav-text">简单工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂方法模式"><span class="nav-number">1.2.</span> <span class="nav-text">工厂方法模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抽象工厂模式"><span class="nav-number">1.3.</span> <span class="nav-text">抽象工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建造者模式"><span class="nav-number">1.4.</span> <span class="nav-text">建造者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#原型模式"><span class="nav-number">1.5.</span> <span class="nav-text">原型模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单例模式"><span class="nav-number">1.6.</span> <span class="nav-text">单例模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结构型模式"><span class="nav-number">2.</span> <span class="nav-text">结构型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#适配器模式"><span class="nav-number">2.1.</span> <span class="nav-text">适配器模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#桥接模式"><span class="nav-number">2.2.</span> <span class="nav-text">桥接模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#装饰模式"><span class="nav-number">2.3.</span> <span class="nav-text">装饰模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外观模式"><span class="nav-number">2.4.</span> <span class="nav-text">外观模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#享元模式"><span class="nav-number">2.5.</span> <span class="nav-text">享元模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代理模式"><span class="nav-number">2.6.</span> <span class="nav-text">代理模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#行为型模式"><span class="nav-number">3.</span> <span class="nav-text">行为型模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令模式"><span class="nav-number">3.1.</span> <span class="nav-text">命令模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中介者模式"><span class="nav-number">3.2.</span> <span class="nav-text">中介者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#观察者模式"><span class="nav-number">3.3.</span> <span class="nav-text">观察者模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#状态模式"><span class="nav-number">3.4.</span> <span class="nav-text">状态模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#策略模式"><span class="nav-number">3.5.</span> <span class="nav-text">策略模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

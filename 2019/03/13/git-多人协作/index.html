@@ -85,7 +85,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="现状video分支用来开发提交代码，test分支是用来测试环境的，interaction是别的团队的开发提交代码分支，master是用来生产环境发布,我现在想新开发个功能：A.合并test和master分支代码到video分支，并且拉最新的video代码 git checkout video123*     git pull origin video*     git rebase test*">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-04T05:47:35.237Z">
+<meta property="og:updated_time" content="2019-04-08T08:09:04.147Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 多人协作">
 <meta name="twitter:description" content="现状video分支用来开发提交代码，test分支是用来测试环境的，interaction是别的团队的开发提交代码分支，master是用来生产环境发布,我现在想新开发个功能：A.合并test和master分支代码到video分支，并且拉最新的video代码 git checkout video123*     git pull origin video*     git rebase test*">
@@ -322,7 +322,7 @@
 </ol>
 <p>但是，由于test分支的代码直接merge到master分支上是不可靠不靠谱的，因此之后老大定下来test分支永远不能合并到master分支上，具体可以看以下：</p>
 <h2 id="新的流程总结下："><a href="#新的流程总结下：" class="headerlink" title="新的流程总结下："></a>新的流程总结下：</h2><p> 1.pull master 在本地master切开发分支feat1<br> 2.feat1开发<br> 3.切test，merge feat1 –squash 可能会有冲突，注意不要将test代码带入feat1<br> 4.在feat1 改bug , 切test merge feat1 –squash<br> 5.切master ，merge feat1 –squash<br> 6.pull或fetch master，解决冲突<br> 7.push origin master<br> 8.预生产回归，发布正式</p>
-<h2 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h2><p><a href="https://www.cnblogs.com/lookphp/p/5799533.html" target="_blank" rel="noopener">git merge -squash 介绍 </a></p>
+<h2 id="ps（经过测试后从本地分支把代码同步到生产分支）"><a href="#ps（经过测试后从本地分支把代码同步到生产分支）" class="headerlink" title="ps（经过测试后从本地分支把代码同步到生产分支）"></a>ps（经过测试后从本地分支把代码同步到生产分支）</h2><p><a href="https://www.cnblogs.com/lookphp/p/5799533.html" target="_blank" rel="noopener">git merge -squash 介绍 </a></p>
 
       
     </div>
@@ -436,7 +436,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">29</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -482,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的流程总结下："><span class="nav-number">2.</span> <span class="nav-text">新的流程总结下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps"><span class="nav-number">3.</span> <span class="nav-text">ps</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#现状"><span class="nav-number">1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#新的流程总结下："><span class="nav-number">2.</span> <span class="nav-text">新的流程总结下：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ps（经过测试后从本地分支把代码同步到生产分支）"><span class="nav-number">3.</span> <span class="nav-text">ps（经过测试后从本地分支把代码同步到生产分支）</span></a></li></ol></div>
             
 
           </div>
