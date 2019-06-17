@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="python,">
+  <meta name="keywords" content="面试,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="作为一个python新手，我真的记不住，因此纪录下来 datetime1234567import timecurrent_date = datetime.date.today().replace(day=1)previous_date = (current_date - datetime.timedelta(1)).replace(day=1)current_date_time_stamp = i">
-<meta name="keywords" content="python">
+<meta name="description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～  display: none 元素会从文档流中消失掉 visibility:hidden 元素占位依旧存在，但是元素消失 height设置为0，width设置为0 使用position:absolute/fixed使元素在不可见区域 opacity: 0 transform: rotateX(90deg">
+<meta name="keywords" content="面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python 日期处理">
-<meta property="og:url" content="http://yoursite.com/2018/12/24/python-日期处理/index.html">
+<meta property="og:title" content="2019-06-04:如何隐藏页面中的某个元素？">
+<meta property="og:url" content="http://yoursite.com/2019/06/04/2019-06-04-如何隐藏页面中的某个元素？/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="作为一个python新手，我真的记不住，因此纪录下来 datetime1234567import timecurrent_date = datetime.date.today().replace(day=1)previous_date = (current_date - datetime.timedelta(1)).replace(day=1)current_date_time_stamp = i">
+<meta property="og:description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～  display: none 元素会从文档流中消失掉 visibility:hidden 元素占位依旧存在，但是元素消失 height设置为0，width设置为0 使用position:absolute/fixed使元素在不可见区域 opacity: 0 transform: rotateX(90deg">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-06-17T02:47:24.164Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python 日期处理">
-<meta name="twitter:description" content="作为一个python新手，我真的记不住，因此纪录下来 datetime1234567import timecurrent_date = datetime.date.today().replace(day=1)previous_date = (current_date - datetime.timedelta(1)).replace(day=1)current_date_time_stamp = i">
+<meta name="twitter:title" content="2019-06-04:如何隐藏页面中的某个元素？">
+<meta name="twitter:description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～  display: none 元素会从文档流中消失掉 visibility:hidden 元素占位依旧存在，但是元素消失 height设置为0，width设置为0 使用position:absolute/fixed使元素在不可见区域 opacity: 0 transform: rotateX(90deg">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/24/python-日期处理/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/04/2019-06-04-如何隐藏页面中的某个元素？/">
 
 
 
 
 
-  <title>python 日期处理 | Hexo</title>
+  <title>2019-06-04:如何隐藏页面中的某个元素？ | Hexo</title>
   
 
 
@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/24/python-日期处理/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/04/2019-06-04-如何隐藏页面中的某个元素？/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python 日期处理</h1>
+          <h1 class="post-title" itemprop="name headline">2019-06-04:如何隐藏页面中的某个元素？</h1>
         
 
         <div class="post-meta">
@@ -280,8 +280,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-24T16:07:21+08:00">
-                2018-12-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-04T09:40:37+08:00">
+                2019-06-04
               </time>
             
 
@@ -318,8 +318,16 @@
       
 
       
-        <p>作为一个python新手，我真的记不住，因此纪录下来</p>
-<figure class="highlight plain"><figcaption><span>datetime</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">import time</span><br><span class="line"></span><br><span class="line">current_date = datetime.date.today().replace(day=1)</span><br><span class="line">previous_date = (current_date - datetime.timedelta(1)).replace(day=1)</span><br><span class="line">current_date_time_stamp = int(time.mktime(current_date.timetuple())) # 当月第一天的时间戳</span><br><span class="line">previous_date_time_stamp = int(time.mktime(previous_date.timetuple())) # 前月第一天的时间戳</span><br><span class="line">print(current_date, previous_date, current_date_time_stamp, previous_date_time_stamp)</span><br></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是来自于参与刘小夕同学的GitHub项目的每日一题，<a href="https://github.com/YvetteLau/Step-By-Step/issues/19" target="_blank" rel="noopener">地址在此</a>，感兴趣的同学可以联系她哟～</p>
+<ol>
+<li>display: none<br> 元素会从文档流中消失掉</li>
+<li>visibility:hidden<br> 元素占位依旧存在，但是元素消失</li>
+<li>height设置为0，width设置为0</li>
+<li>使用position:absolute/fixed使元素在不可见区域</li>
+<li>opacity: 0</li>
+<li>transform: rotateX(90deg); / transform: skewX(90deg);/  transform: scale(0);/ transform:translateY(-10000px); / translateX(-10000px);</li>
+<li>margin-left:-999%;</li>
+</ol>
 
       
     </div>
@@ -337,7 +345,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/index.md/python/" rel="tag"># python</a>
+            <a href="/tags/index.md/面试/" rel="tag"># 面试</a>
           
         </div>
       
@@ -350,8 +358,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/24/js-字符串转dom节点/" rel="next" title="js 字符串转dom节点">
-                <i class="fa fa-chevron-left"></i> js 字符串转dom节点
+              <a href="/2019/06/03/2019-06-03-什么是XSS攻击，XSS攻击可以分为哪几类？我们如何防范XSS攻击？/" rel="next" title="2019-06-03: 什么是XSS攻击，XSS攻击可以分为哪几类？我们如何防范XSS攻击？">
+                <i class="fa fa-chevron-left"></i> 2019-06-03: 什么是XSS攻击，XSS攻击可以分为哪几类？我们如何防范XSS攻击？
               </a>
             
           </div>
@@ -359,10 +367,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/25/2018年终总结/" rel="prev" title="2018年终总结">
-                2018年终总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -414,8 +418,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -466,6 +479,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
