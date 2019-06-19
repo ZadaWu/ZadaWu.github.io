@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="css,">
+  <meta name="keywords" content="面试,">
 
 
 
@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="先强烈推荐一个前端程序员可以自己练习基础的网站：https://learn.freecodecamp.org，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。 今天要分享的就是animation, 和transform transfrom属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。你可以通过transform-origin修改中心">
-<meta name="keywords" content="css">
+<meta name="description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～ 实现Promise.all1234567891011121314151617181920212223function isArray(object)&amp;#123;    return object &amp;amp;&amp;amp; typeof object===&amp;apos;object&amp;apos; &amp;amp;&amp;am">
+<meta name="keywords" content="面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css 之 animation, transform">
-<meta property="og:url" content="http://yoursite.com/2018/12/21/css-之-animation/index.html">
+<meta property="og:title" content="2019-06-19:实现 Promise.all 方法">
+<meta property="og:url" content="http://yoursite.com/2019/06/19/2019-06-19-实现-Promise-all-方法/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="先强烈推荐一个前端程序员可以自己练习基础的网站：https://learn.freecodecamp.org，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。 今天要分享的就是animation, 和transform transfrom属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。你可以通过transform-origin修改中心">
+<meta property="og:description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～ 实现Promise.all1234567891011121314151617181920212223function isArray(object)&amp;#123;    return object &amp;amp;&amp;amp; typeof object===&amp;apos;object&amp;apos; &amp;amp;&amp;am">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2019-06-19T07:49:49.306Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="css 之 animation, transform">
-<meta name="twitter:description" content="先强烈推荐一个前端程序员可以自己练习基础的网站：https://learn.freecodecamp.org，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。 今天要分享的就是animation, 和transform transfrom属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。你可以通过transform-origin修改中心">
+<meta name="twitter:title" content="2019-06-19:实现 Promise.all 方法">
+<meta name="twitter:description" content="前言这是来自于参与刘小夕同学的GitHub项目的每日一题，地址在此，感兴趣的同学可以联系她哟～ 实现Promise.all1234567891011121314151617181920212223function isArray(object)&amp;#123;    return object &amp;amp;&amp;amp; typeof object===&amp;apos;object&amp;apos; &amp;amp;&amp;am">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/12/21/css-之-animation/">
+  <link rel="canonical" href="http://yoursite.com/2019/06/19/2019-06-19-实现-Promise-all-方法/">
 
 
 
 
 
-  <title>css 之 animation, transform | Hexo</title>
+  <title>2019-06-19:实现 Promise.all 方法 | Hexo</title>
   
 
 
@@ -251,7 +251,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/21/css-之-animation/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/19/2019-06-19-实现-Promise-all-方法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="大大虾">
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">css 之 animation, transform</h1>
+          <h1 class="post-title" itemprop="name headline">2019-06-19:实现 Promise.all 方法</h1>
         
 
         <div class="post-meta">
@@ -280,8 +280,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-21T18:08:00+08:00">
-                2018-12-21
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-19T15:08:45+08:00">
+                2019-06-19
               </time>
             
 
@@ -318,13 +318,9 @@
       
 
       
-        <p>先强烈推荐一个前端程序员可以自己练习基础的网站：<a href="https://learn.freecodecamp.org" target="_blank" rel="noopener">https://learn.freecodecamp.org</a>，作为一个工作了3年半的前端工程师，表示在这里也收集了不少自己缺少的技能点。</p>
-<p>今天要分享的就是animation, 和transform</p>
-<h2 id="transfrom"><a href="#transfrom" class="headerlink" title="transfrom"></a>transfrom</h2><p>属性允许你旋转，缩放，倾斜或平移给定元素。且transform默认是绕着中心点旋转的。<br>你可以通过transform-origin修改中心点位置，比如：<br>transform-origin: bottom left;-中心点为左下角位置角<br>transform-origin: 50px 70px; -中心点位置有中间移到了距离左侧50像素，顶部70像素的地方</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">scale(x,y) 放大／缩小倍数</span><br><span class="line">rotate(deg) 旋转角度</span><br><span class="line">skewX(xdeg) 横向拉升 </span><br><span class="line">skewY(ydeg) 纵向拉升</span><br><span class="line">skew(xdeg, ydeg) 横纵向都拉伸</span><br><span class="line">translate(x, y) 原点向右或向下挪动</span><br><span class="line">matrix(a, b, c, d, e, f) 理解成3*3矩阵，原点位置x, y, 则实际x变化位置为ax+cy+e,y变化位置为bx+dy+f,等同于transform: translate(ax+cy+e+&apos;px&apos;, bx+dy+f+&apos;px&apos;) [详情请点击](https://segmentfault.com/a/1190000011942578)</span><br><span class="line">matrix3d() 3D变换 4*4矩阵</span><br></pre></td></tr></table></figure>
-<h2 id="animation"><a href="#animation" class="headerlink" title="animation"></a>animation</h2><p>annimation配合keyframes一起用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@keyframes slidein &#123;</span><br><span class="line">  from &#123; transform: scaleX(0); &#125;</span><br><span class="line">  to   &#123; transform: scaleX(1); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">animation-name  动画name</span><br><span class="line">animation-duration 一个动画周期的时长，单位为秒(s)或者毫秒(ms)</span><br><span class="line">animation-timing-function 定义CSS动画在每一动画周期中执行的节奏 ease／ease-in／ease-out／linear [贝塞尔曲线原理](https://www.jianshu.com/p/d999f090d333) [贝塞尔曲线对比](http://cubic-bezier.com/#.25,.1,.25,1)</span><br><span class="line">animation-delay 定义动画于何时开始，即从动画应用在元素上到动画开始的这段时间的长度。</span><br><span class="line">animation-iteration-count 循环次数</span><br><span class="line">animation-direction 属性指示动画是否反向播放 normal／reverse／alternate／alternate-reverse</span><br><span class="line">animation-fill-mode 用来指定在动画执行之前和之后如何给动画的目标应用样式。 none／forwards／backwards／both／应用多个none, backwards／应用多个both, forwards, none</span><br></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>这是来自于参与刘小夕同学的GitHub项目的每日一题，<a href="https://github.com/YvetteLau/Step-By-Step/issues/25" target="_blank" rel="noopener">地址在此</a>，感兴趣的同学可以联系她哟～</p>
+<h2 id="实现Promise-all"><a href="#实现Promise-all" class="headerlink" title="实现Promise.all"></a>实现Promise.all</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">function isArray(object)&#123;</span><br><span class="line">    return object &amp;&amp; typeof object===&apos;object&apos; &amp;&amp;</span><br><span class="line">            object instanceof Array;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">Promise.myall = function (promiseList) &#123;</span><br><span class="line">  if (!isArray(promiseList)) &#123;</span><br><span class="line">    return &apos;not an array&apos;</span><br><span class="line">  &#125;</span><br><span class="line">  return new Promise ((resolve, reject)=&gt; &#123;</span><br><span class="line">    let count = 0</span><br><span class="line">    promiseList.forEach(element =&gt; &#123;</span><br><span class="line">        element.then(() =&gt; &#123;</span><br><span class="line">          count ++;</span><br><span class="line">          if (promiseList.length === count) &#123;</span><br><span class="line">            resolve()</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;).catch(error =&gt;&#123;</span><br><span class="line">          reject(error)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="测试代码"><a href="#测试代码" class="headerlink" title="测试代码"></a>测试代码</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var p1 = Promise.resolve(1),</span><br><span class="line">    p2 = Promise.reject(2),</span><br><span class="line">    p3 = Promise.resolve(3);</span><br><span class="line">Promise.myall([p1, p2, p3]).then(function (results) &#123;</span><br><span class="line">    //then方法不会被执行</span><br><span class="line">    console.log(results);</span><br><span class="line">&#125;).catch(function (e)&#123;</span><br><span class="line">    //catch方法将会被执行，输出结果为：2</span><br><span class="line">    console.log(2);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -342,7 +338,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/index.md/css/" rel="tag"># css</a>
+            <a href="/tags/index.md/面试/" rel="tag"># 面试</a>
           
         </div>
       
@@ -355,8 +351,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/21/前端编码规范/" rel="next" title="前端编码规范">
-                <i class="fa fa-chevron-left"></i> 前端编码规范
+              <a href="/2019/06/19/2019-06-19-什么是闭包？闭包的作用是什么/" rel="next" title="2019-06-19:什么是闭包？闭包的作用是什么">
+                <i class="fa fa-chevron-left"></i> 2019-06-19:什么是闭包？闭包的作用是什么
               </a>
             
           </div>
@@ -364,10 +360,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/24/js-正则表达式/" rel="prev" title="js 正则表达式">
-                js 正则表达式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -490,7 +482,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#transfrom"><span class="nav-number">1.</span> <span class="nav-text">transfrom</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#animation"><span class="nav-number">2.</span> <span class="nav-text">animation</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现Promise-all"><span class="nav-number">2.</span> <span class="nav-text">实现Promise.all</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试代码"><span class="nav-number">2.1.</span> <span class="nav-text">测试代码</span></a></li></ol></li></ol></div>
             
 
           </div>
