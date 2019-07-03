@@ -80,14 +80,14 @@
 <meta name="description" content="前言终于开发了两个H5了，相比之前中后台开发以及可视化开发多了点新颖感。觉得技术栈也越来越丰富，继续加油了。把这里当树洞吐槽一下，最近爸爸确诊肺鳞癌，PET-CT的结果昨天刚刚到手，今天要去找医生，我看到报告上有转移的结节，我不知道爸爸还能不能手术，接下来的路怎么走呢？我决心听医生的，不是我专业的事情，我无法判断如何走是正确的，我也没有告诉爸爸妈妈，我得撑到瞒不住的那一天。得好好学习啊，才能涨工资">
 <meta name="keywords" content="css,animation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019-07-03: 使用steps功能符来完成动画">
+<meta property="og:title" content="2019-07-03: 动画的实现方式">
 <meta property="og:url" content="http://yoursite.com/2019/07/03/2019-07-03-使用steps功能符来完成动画/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="前言终于开发了两个H5了，相比之前中后台开发以及可视化开发多了点新颖感。觉得技术栈也越来越丰富，继续加油了。把这里当树洞吐槽一下，最近爸爸确诊肺鳞癌，PET-CT的结果昨天刚刚到手，今天要去找医生，我看到报告上有转移的结节，我不知道爸爸还能不能手术，接下来的路怎么走呢？我决心听医生的，不是我专业的事情，我无法判断如何走是正确的，我也没有告诉爸爸妈妈，我得撑到瞒不住的那一天。得好好学习啊，才能涨工资">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-03T03:00:36.374Z">
+<meta property="og:updated_time" content="2019-07-03T03:01:46.076Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019-07-03: 使用steps功能符来完成动画">
+<meta name="twitter:title" content="2019-07-03: 动画的实现方式">
 <meta name="twitter:description" content="前言终于开发了两个H5了，相比之前中后台开发以及可视化开发多了点新颖感。觉得技术栈也越来越丰富，继续加油了。把这里当树洞吐槽一下，最近爸爸确诊肺鳞癌，PET-CT的结果昨天刚刚到手，今天要去找医生，我看到报告上有转移的结节，我不知道爸爸还能不能手术，接下来的路怎么走呢？我决心听医生的，不是我专业的事情，我无法判断如何走是正确的，我也没有告诉爸爸妈妈，我得撑到瞒不住的那一天。得好好学习啊，才能涨工资">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title>2019-07-03: 使用steps功能符来完成动画 | Hexo</title>
+  <title>2019-07-03: 动画的实现方式 | Hexo</title>
   
 
 
@@ -268,7 +268,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2019-07-03: 使用steps功能符来完成动画</h1>
+          <h1 class="post-title" itemprop="name headline">2019-07-03: 动画的实现方式</h1>
         
 
         <div class="post-meta">
@@ -342,7 +342,7 @@
 <h3 id="使用JS操作css属性"><a href="#使用JS操作css属性" class="headerlink" title="使用JS操作css属性"></a>使用JS操作css属性</h3><p>一般情况下，不建议用js控制，只有针对那种动画难以实现的交互的动画，比如：tab点击后滚动到中间，这个用css是不那么方便的，我们操作scrollLeft来控制滚动的动画会更加合适。<br>而且操作与获取dom属性会引起页面的重绘，非必要情况不使用</p>
 <h3 id="使用canvas"><a href="#使用canvas" class="headerlink" title="使用canvas"></a>使用canvas</h3><p>使用canvas的好处是，只要有一个基于canvas模拟帧动画的类库，就可以随意使用。操作JavaScript比操作css要灵活，可以传递各种参数实现不同的要求，还可以使用回调函数来设置动画结束时的操作。缺点是老式浏览器不兼容canvas，而且如果需求简单的话，使用canvas有些大材小用。一个最简单的循环动画类如下所示：</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>css transform:translate3d() 在FPS/CPU/Rendering/Painting这几个指标上优于其他的方案，因此推荐使用transform:translate3d</p>
-<p>参考链接：<br><a href="https://aotu.io/notes/2017/08/14/fix-sprite-anim/index.html" target="_blank" rel="noopener">CSS技巧：逐帧动画抖动解决方案</a><br><a href="https://juejin.im/post/5c7bd2646fb9a049cb197921" target="_blank" rel="noopener">帧动画的多种实现方式与性能对比</a></p>
+<p>参考链接：<br><a href="https://aotu.io/notes/2017/08/14/fix-sprite-anim/index.html" target="_blank" rel="noopener">CSS技巧：逐帧动画抖动解决方案</a><br><a href="https://juejin.im/post/5c7bd2646fb9a049cb197921" target="_blank" rel="noopener">帧动画的多种实现方式与性能对比</a><br><a href="https://www.zhangxinxu.com/wordpress/2018/06/css3-animation-steps-step-start-end/" target="_blank" rel="noopener">CSS3 animation属性中的steps功能符深入介绍</a></p>
 
       
     </div>
