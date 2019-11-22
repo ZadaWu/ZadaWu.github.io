@@ -77,18 +77,18 @@
 
 
 
-<meta name="description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案">
+<meta name="description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案 使用linear-gradien">
 <meta name="keywords" content="移动端,坑">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2019-06-27: 移动H5的坑">
 <meta property="og:url" content="http://yoursite.com/2019/06/27/2019-06-27-移动H5的坑/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案">
+<meta property="og:description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案 使用linear-gradien">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-21T08:43:28.993Z">
+<meta property="og:updated_time" content="2019-11-22T03:41:44.296Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="2019-06-27: 移动H5的坑">
-<meta name="twitter:description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案">
+<meta name="twitter:description" content="主要是想收集下移动端遇到的问题，以及对应的解决方案 H5在安卓上滚动正常，在ios上滚动卡顿 解决方案 在移动端使用rem的时候，安卓存在样式不正确的情况，这时候对于1px的这种就不要转成rem使用  css特效 使用after/before实现简单的button动画 解决方案 使用transform:scale(.5)来实现chrome字体小于12px 解决方案 使用linear-gradien">
 
 
 
@@ -325,6 +325,19 @@
 <h2 id="css特效"><a href="#css特效" class="headerlink" title="css特效"></a>css特效</h2><ul>
 <li>使用after/before实现简单的button动画 <a href="https://css.30secondsofcode.org/snippet/button-border-animation" target="_blank" rel="noopener">解决方案</a></li>
 <li>使用transform:scale(.5)来实现chrome字体小于12px <a href="https://www.jianshu.com/p/dd893bd25b8d" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用linear-gradient 实现有渐变的背景图 <a href="https://www.runoob.com/cssref/func-linear-gradient.html" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用conic-gradient 可以去绘制柱状图/对于有倒计时的进度圆圈也可以适用  <a href="https://www.cnblogs.com/EnSnail/p/9771973.html" target="_blank" rel="noopener">解决方案</a></li>
+<li>css可以定义变量使用 <code>--some-color: #da7800;</code> <a href="https://css.30secondsofcode.org/snippet/custom-variables" target="_blank" rel="noopener">解决方案</a></li>
+<li>ul使用 <code>counter-reset： counter</code> li使用 <code>counter-increment: counter;</code>来实现序列前加序号 <a href="https://css.30secondsofcode.org/snippet/counter" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用 <code>::selection</code> 定制选中后的文字特效 <a href="https://css.30secondsofcode.org/snippet/custom-text-selection" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用 <code>p:first-child::first-letter</code> 来自定义首字母特效 <a href="https://css.30secondsofcode.org/snippet/drop-cap" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用 <code>text-shadow</code> 凸显文字选中后的阴影 <a href="https://css.30secondsofcode.org/snippet/etched-text" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用 <code>:focus-within</code> 来改变子元素被选中后父元素的样式 <a href="https://css.30secondsofcode.org/snippet/focus-within" target="_blank" rel="noopener">解决方案</a></li>
+<li>一键跳转全屏 <a href="https://css.30secondsofcode.org/snippet/fullscreen" target="_blank" rel="noopener">解决方案</a></li>
+<li>文字实现渐变 <a href="https://css.30secondsofcode.org/snippet/gradient-text" target="_blank" rel="noopener">解决方案</a></li>
+<li>按钮hover随鼠标渐变 <a href="https://css.30secondsofcode.org/snippet/mouse-cursor-gradient-tracking" target="_blank" rel="noopener">解决方案</a></li>
+<li>使用 <code>li:not(:last-child)</code> 来对最后一个元素特殊处理 <a href="https://css.30secondsofcode.org/snippet/not-selector" target="_blank" rel="noopener">解决方案</a></li>
+<li>文字下划线 <a href="https://css.30secondsofcode.org/snippet/pretty-text-underline" target="_blank" rel="noopener">解决方案</a></li>
 </ul>
 
       
